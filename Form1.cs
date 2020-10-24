@@ -54,5 +54,10 @@ namespace Blue_Ward
                 userList[userID] = JsonConvert.DeserializeObject<User>(jsonString);
             }
         }
+
+        private void summonerNameTxtBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
