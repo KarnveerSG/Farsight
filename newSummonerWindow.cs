@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace Blue_Ward
 {
-    public partial class Form1 : Form
+    public partial class newSummonerWindow : Form
     {
         private string summonerName;
         User[] userList = new User[5];
 
-        public Form1()
+        public newSummonerWindow()
         {
             InitializeComponent();
         }

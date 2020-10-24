@@ -1,6 +1,6 @@
 ﻿namespace Blue_Ward
 {
-    partial class Form1
+    partial class newSummonerWindow
     {
         /// <summary>
         /// Required designer variable.
