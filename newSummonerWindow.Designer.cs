@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newSummonerWindow));
             this.button1 = new System.Windows.Forms.Button();
             this.summonerNameTxtBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             this.ClientSize = new System.Drawing.Size(332, 97);
             this.Controls.Add(this.summonerNameTxtBox);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "newSummonerWindow";
             this.Text = "Add New Summoner";
             this.Load += new System.EventHandler(this.newSummonerWindow_Load);
