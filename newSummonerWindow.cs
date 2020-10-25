@@ -15,7 +15,7 @@ namespace Blue_Ward
     public partial class newSummonerWindow : Form
     {
         private string summonerName;
-        User[] userList = new User[5];
+        User user = new User();
 
         public newSummonerWindow()
         {
@@ -25,34 +25,31 @@ namespace Blue_Ward
         private void button1_Click(object sender, EventArgs e)
         {
             summonerName = summonerNameTxtBox.Text;
-
-            for (int i = 0; i < userList.Length; i++)
-            {
-                if (userList[i] == null)
-                {
-                    userList[i] = new User(summonerName);
-                    PopulateUser(i);    //turn into a gui output
-                    return;
-                }
-
-                if (i == userList.Length && userList[i] != null)
-                {
-                    Console.WriteLine("Out of summoner space");
-                }
-            }
+            createNewUser();
+            
         }
 
-        public async void PopulateUser(int userID)
+        public async Task PopulateUser()
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=RGAPI-b5585198-babd-491e-80ac-6cf78ae20ea2");
+            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=RGAPI-47b3da84-5c75-4204-87b4-746494dd4453");
 
             if (response != null)
             {
-                string jsonString = await response.Content.ReadAsStringAsync();
+               string jsonString = await response.Content.ReadAsStringAsync();
 
-                userList[userID] = JsonConvert.DeserializeObject<User>(jsonString);
+               user = JsonConvert.DeserializeObject<User>(jsonString);
             }
+        }
+
+        public async void createNewUser()
+        {
+            await PopulateUser();
+
+            this.Close();
+            mainScreen newMain = new mainScreen();
+            newMain.setSummoner(user);
+
         }
 
         private void summonerNameTxtBox_TextChanged(object sender, EventArgs e)

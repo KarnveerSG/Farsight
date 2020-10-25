@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
@@ -24,9 +25,19 @@ namespace Blue_Ward
             name = username;
         }
 
+        public User()
+        {
+            name = "";
+        }
+
+        public void setSummonerName(string summonerName)
+        {
+            name = summonerName;
+        }
+
         public void print()
         {
-            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Name: " + name + "\n");
             Console.WriteLine("id: " + id + "\n");
             Console.WriteLine("accountId: " + accountId + "\n");
             Console.WriteLine("puuid: " + puuid + "\n");
