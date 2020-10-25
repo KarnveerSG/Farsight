@@ -1,28 +1,19 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Diagnostics;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System;
 
 namespace Blue_Ward
 {
     public class User
     {
-        public string id {get; set;}
+        public string id { get; set; }
         public string accountId { get; set; }
         public string puuid { get; set; }
         public string name { get; set; }
         public string profileIconId { get; set; }
-        public int summonerLevel { get; set; }   
+        public int summonerLevel { get; set; }
 
-        public User(string username)
+        public User(string summonerName)
         {
-            name = username;
+            name = summonerName;
         }
 
         public User()

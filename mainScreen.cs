@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Blue_Ward
@@ -19,7 +12,12 @@ namespace Blue_Ward
         {
 
             InitializeComponent();
-            
+
+        }
+
+        public void AddNewSummoner(User newUser)
+        {
+            setSummoner(newUser);
         }
 
         private void mainScreen_Load(object sender, EventArgs e)
@@ -29,10 +27,8 @@ namespace Blue_Ward
 
         private void addNewSummonerButtton_Click(object sender, EventArgs e)
         {
-            newSummonerWindow newWindow = new newSummonerWindow();
-
+            newSummonerWindow newWindow = new newSummonerWindow(this);
             newWindow.Show();
-         
         }
 
         public void setSummoner(User user)
@@ -44,11 +40,12 @@ namespace Blue_Ward
             else
             {
                 userList[currentUserIndex] = user;
+                summonerAccounts.Items.Add(user.name);
+                MessageBox.Show("New Summoner '" + user.name + "' was added");
                 currentUserIndex++;
             }
 
             userList[currentUserIndex - 1].print();
-
         }
     }
 }

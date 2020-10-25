@@ -1,12 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,9 +10,16 @@ namespace Blue_Ward
     {
         private string summonerName;
         User user = new User();
+        private mainScreen mainScreen;
 
         public newSummonerWindow()
         {
+            InitializeComponent();
+        }
+
+        public newSummonerWindow(mainScreen mainScreen)
+        {
+            this.mainScreen = mainScreen;
             InitializeComponent();
         }
 
@@ -26,7 +27,12 @@ namespace Blue_Ward
         {
             summonerName = summonerNameTxtBox.Text;
             createNewUser();
-            
+        }
+
+        public async void createNewUser()
+        {
+            await PopulateUser();
+            this.Close();
         }
 
         public async Task PopulateUser()
@@ -36,20 +42,11 @@ namespace Blue_Ward
 
             if (response != null)
             {
-               string jsonString = await response.Content.ReadAsStringAsync();
+                string jsonString = await response.Content.ReadAsStringAsync();
 
-               user = JsonConvert.DeserializeObject<User>(jsonString);
+                user = JsonConvert.DeserializeObject<User>(jsonString);
+                this.mainScreen.setSummoner(user);
             }
-        }
-
-        public async void createNewUser()
-        {
-            await PopulateUser();
-
-            this.Close();
-            mainScreen newMain = new mainScreen();
-            newMain.setSummoner(user);
-
         }
 
         private void summonerNameTxtBox_TextChanged(object sender, EventArgs e)

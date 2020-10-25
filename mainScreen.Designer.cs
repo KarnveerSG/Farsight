@@ -34,18 +34,20 @@
             // 
             // summonerAccounts
             // 
+            this.summonerAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summonerAccounts.FormattingEnabled = true;
             this.summonerAccounts.Location = new System.Drawing.Point(12, 12);
             this.summonerAccounts.Name = "summonerAccounts";
-            this.summonerAccounts.Size = new System.Drawing.Size(121, 21);
+            this.summonerAccounts.Size = new System.Drawing.Size(185, 28);
             this.summonerAccounts.TabIndex = 0;
             this.summonerAccounts.Text = "Choose Account";
             // 
             // addNewSummonerButtton
             // 
-            this.addNewSummonerButtton.Location = new System.Drawing.Point(12, 39);
+            this.addNewSummonerButtton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewSummonerButtton.Location = new System.Drawing.Point(203, 12);
             this.addNewSummonerButtton.Name = "addNewSummonerButtton";
-            this.addNewSummonerButtton.Size = new System.Drawing.Size(121, 23);
+            this.addNewSummonerButtton.Size = new System.Drawing.Size(185, 28);
             this.addNewSummonerButtton.TabIndex = 1;
             this.addNewSummonerButtton.Text = "Add New Summoner";
             this.addNewSummonerButtton.UseVisualStyleBackColor = true;
