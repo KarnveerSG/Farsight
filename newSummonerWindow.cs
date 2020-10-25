@@ -59,5 +59,10 @@ namespace Blue_Ward
         {
 
         }
+
+        private void newSummonerWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

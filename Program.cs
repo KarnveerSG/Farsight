@@ -16,7 +16,7 @@ namespace Blue_Ward
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new newSummonerWindow());
+            Application.Run(new mainScreen());
         }
 
 
