@@ -38,7 +38,7 @@ namespace Blue_Ward
         public async Task PopulateUser()
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=RGAPI-a8d0fd7f-2073-4232-867b-ed5d4912e651");
+            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=RGAPI-6dad0715-7e7c-40ae-a0c5-e2f1de04747d");
 
             if (response != null)
             {
