@@ -25,7 +25,7 @@ namespace Blue_Ward
 
         }
 
-        private void addNewSummonerButtton_Click(object sender, EventArgs e)
+        private void addNewSummonerButton_Click(object sender, EventArgs e)
         {
             newSummonerWindow newWindow = new newSummonerWindow(this);
             newWindow.Show();
@@ -46,6 +46,19 @@ namespace Blue_Ward
             }
 
             userList[currentUserIndex - 1].print();
+        }
+
+        private void addMatchHistoryButton_Click(object sender, EventArgs e)
+        {
+            if (userList[0] == null)
+            {
+                MessageBox.Show("Atleast one summoner must be added before viewing match history!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[currentUserIndex - 1].accountId);
+                newWindow.Show();
+            }
         }
     }
 }
