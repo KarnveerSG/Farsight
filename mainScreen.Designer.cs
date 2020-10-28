@@ -30,7 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainScreen));
             this.summonerAccounts = new System.Windows.Forms.ComboBox();
-            this.addNewSummonerButtton = new System.Windows.Forms.Button();
+            this.addNewSummonerButton = new System.Windows.Forms.Button();
+            this.addMatchHistoryButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // summonerAccounts
@@ -43,23 +44,35 @@
             this.summonerAccounts.TabIndex = 0;
             this.summonerAccounts.Text = "Choose Account";
             // 
-            // addNewSummonerButtton
+            // addNewSummonerButton
             // 
-            this.addNewSummonerButtton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewSummonerButtton.Location = new System.Drawing.Point(203, 12);
-            this.addNewSummonerButtton.Name = "addNewSummonerButtton";
-            this.addNewSummonerButtton.Size = new System.Drawing.Size(185, 28);
-            this.addNewSummonerButtton.TabIndex = 1;
-            this.addNewSummonerButtton.Text = "Add New Summoner";
-            this.addNewSummonerButtton.UseVisualStyleBackColor = true;
-            this.addNewSummonerButtton.Click += new System.EventHandler(this.addNewSummonerButtton_Click);
+            this.addNewSummonerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewSummonerButton.Location = new System.Drawing.Point(203, 12);
+            this.addNewSummonerButton.Name = "addNewSummonerButton";
+            this.addNewSummonerButton.Size = new System.Drawing.Size(185, 28);
+            this.addNewSummonerButton.TabIndex = 1;
+            this.addNewSummonerButton.Text = "Add New Summoner";
+            this.addNewSummonerButton.UseVisualStyleBackColor = true;
+            this.addNewSummonerButton.Click += new System.EventHandler(this.addNewSummonerButton_Click);
+            // 
+            // addMatchHistoryButton
+            // 
+            this.addMatchHistoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addMatchHistoryButton.Location = new System.Drawing.Point(203, 46);
+            this.addMatchHistoryButton.Name = "addMatchHistoryButton";
+            this.addMatchHistoryButton.Size = new System.Drawing.Size(185, 29);
+            this.addMatchHistoryButton.TabIndex = 2;
+            this.addMatchHistoryButton.Text = "Match History";
+            this.addMatchHistoryButton.UseVisualStyleBackColor = true;
+            this.addMatchHistoryButton.Click += new System.EventHandler(this.addMatchHistoryButton_Click);
             // 
             // mainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.addNewSummonerButtton);
+            this.Controls.Add(this.addMatchHistoryButton);
+            this.Controls.Add(this.addNewSummonerButton);
             this.Controls.Add(this.summonerAccounts);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mainScreen";
@@ -72,6 +85,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox summonerAccounts;
-        private System.Windows.Forms.Button addNewSummonerButtton;
+        private System.Windows.Forms.Button addNewSummonerButton;
+        private System.Windows.Forms.Button addMatchHistoryButton;
     }
 }

@@ -52,6 +52,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="championMastery.cs" />
+    <Compile Include="matchData.cs" />
+    <Compile Include="matchHistory.cs" />
+    <Compile Include="newMatchHistoryWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newMatchHistoryWindow.Designer.cs">
+      <DependentUpon>newMatchHistoryWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +78,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="mainScreen.resx">
       <DependentUpon>mainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newMatchHistoryWindow.resx">
+      <DependentUpon>newMatchHistoryWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newSummonerWindow.resx">
       <DependentUpon>newSummonerWindow.cs</DependentUpon>
