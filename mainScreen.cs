@@ -13,6 +13,8 @@ namespace Blue_Ward
 
             InitializeComponent();
 
+            Champion champion = new Champion();
+            champion.DeserialiseJSON(JSONParser.ChampionsFull());
         }
 
         public void AddNewSummoner(User newUser)
