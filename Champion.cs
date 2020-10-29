@@ -26,7 +26,7 @@ namespace Blue_Ward
             this.keys = championInfo.keys;
             this.keys = ProcessChampions(this.keys);
 
-            foreach (KeyValuePair<int, string> champions in championInfo.keys)
+            foreach (KeyValuePair<int, string> champions in this.keys)
             {
                 Console.WriteLine("Champion key: " + champions.Key + " - " + champions.Value);
             }
