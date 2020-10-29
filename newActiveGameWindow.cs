@@ -1,13 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,7 +13,7 @@ namespace Blue_Ward
         private CurrentGameStats stats = new CurrentGameStats();
         private List<championMastery> fullChampionMasteryList = new List<championMastery>();
         private List<currentChampMastery> currentChamp = new List<currentChampMastery>();
-        
+
         Champion champion = new Champion();
         public newActiveGameWindow(string accountId, Champion champion)
         {
@@ -28,13 +22,16 @@ namespace Blue_Ward
             createActiveGameStats(accountId);
         }
 
-        public void findCurrentChampMastery() {                          
-            for (int i = 0; i < 10; i++) {
+        public void findCurrentChampMastery()
+        {
+            for (int i = 0; i < 10; i++)
+            {
                 for (int j = 0; j < fullChampionMasteryList[i].championMasteries.Count; j++)
                 {
-                    if (stats.participants[i].championId == fullChampionMasteryList[i].championMasteries[j].championId) {
+                    if (stats.participants[i].championId == fullChampionMasteryList[i].championMasteries[j].championId)
+                    {
                         currentChampMastery temp = new currentChampMastery("");
-                        currentChamp.Add(temp); 
+                        currentChamp.Add(temp);
                         currentChamp[i].summonerName = fullChampionMasteryList[i].summonerName;
                         currentChamp[i].currentMastery.championId = fullChampionMasteryList[i].championMasteries[j].championId;
                         currentChamp[i].currentMastery.championLevel = fullChampionMasteryList[i].championMasteries[j].championLevel;
@@ -66,7 +63,8 @@ namespace Blue_Ward
             {
                 string jsonString = await response.Content.ReadAsStringAsync();
                 stats = JsonConvert.DeserializeObject<CurrentGameStats>(jsonString);
-                if (stats.participants == null) {
+                if (stats.participants == null)
+                {
                     MessageBox.Show("Selected player is not in a game currently!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

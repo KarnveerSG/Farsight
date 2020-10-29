@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Blue_Ward
 {
@@ -14,7 +10,8 @@ namespace Blue_Ward
         public string gameMode { get; set; }
         public List<CurrentGameParticipants> participants { get; set; }
 
-        public class CurrentGameParticipants {
+        public class CurrentGameParticipants
+        {
 
             public long championId { get; set; }
             public long profileIconId { get; set; }
@@ -26,7 +23,8 @@ namespace Blue_Ward
             public long spell2Id { get; set; }         //Summoner Spells
             public Perks perks { get; set; }
 
-            public class Perks {
+            public class Perks
+            {
                 public long perkStyle { get; set; }         //Primary rune tree
                 public long perkSubStyle { get; set; }      //Second rune tree
                 public List<long> perkIds { get; set; }    //List for IDs for all runes

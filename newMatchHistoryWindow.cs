@@ -41,9 +41,10 @@ namespace Blue_Ward
                 string jsonString = await response.Content.ReadAsStringAsync();
 
                 matchHistory = JsonConvert.DeserializeObject<matchHistory>(jsonString);
-                for (int i = 0; i < 100; i++) {
-                    string temp = ""; 
-                     champion.keys.TryGetValue(matchHistory.matches[i].champion, out temp);
+                for (int i = 0; i < 100; i++)
+                {
+                    string temp = "";
+                    champion.keys.TryGetValue(matchHistory.matches[i].champion, out temp);
                     matchHistory.matches[i].championName = temp;
                 }
             }
@@ -69,7 +70,7 @@ namespace Blue_Ward
                 temp1.championMasteries = JsonConvert.DeserializeObject<List<championMastery.ChampionMasteryDTO>>(jsonString);
                 this.championMasteryList.Add(temp1);
                 this.championMasteryList[index].summonerName = matchData.participantIdentities[index].player.summonerName;      //Uses participant data to insert summoner name into mastery list 
-                
+
             }
             for (int i = 0; i < this.championMasteryList[index].championMasteries.Count; i++)                           //This adds champion names to all champion IDs in mastery.
             {
@@ -100,7 +101,7 @@ namespace Blue_Ward
                     matchData.participants[i].championName = temp;
                     matchData.participants[i].summonerName = matchData.participantIdentities[i].player.summonerName;
                 }
-                
+
                 for (int i = 0; i < 10; i++)
                 {
                     await createChampionMasteryHistory(matchData.participantIdentities[i].player.summonerId, i); //Finds champion mastery data for all 10 participants in a game

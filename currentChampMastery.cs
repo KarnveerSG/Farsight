@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Blue_Ward
+﻿namespace Blue_Ward
 {
     class currentChampMastery
     {
@@ -19,7 +13,8 @@ namespace Blue_Ward
             public string summonerId { get; set; }
             public int championPoints { get; set; }
         }
-        public currentChampMastery(string temp) {  //Constructor created to fill in temp objects when currentChampMastery object is used in a list externally.
+        public currentChampMastery(string temp)
+        {  //Constructor created to fill in temp objects when currentChampMastery object is used in a list externally.
             summonerName = "temp";
             this.currentMastery = new ChampionMasteryDTO();
             this.currentMastery.championId = 0;

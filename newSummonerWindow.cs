@@ -48,15 +48,5 @@ namespace Blue_Ward
                 this.mainScreen.setSummoner(user);
             }
         }
-
-        private void summonerNameTxtBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void newSummonerWindow_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
