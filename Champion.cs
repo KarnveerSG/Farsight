@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace Blue_Ward
 {
@@ -23,11 +25,36 @@ namespace Blue_Ward
             this.format = championInfo.format;
             this.version = championInfo.version;
             this.keys = championInfo.keys;
+            this.keys = ProcessChampions(this.keys);
 
             foreach (KeyValuePair<int, string> champions in championInfo.keys)
             {
                 Console.WriteLine("Champion key: " + champions.Key + " - " + champions.Value);
             }
+
+            string testString = "TwistedFate";
+            string newValue = Regex.Replace(testString, "([a-z])([A-Z])", "$1 $2");
+            Console.WriteLine("Spaces added -->: " + newValue);
+        }
+
+        public Dictionary<int, string> ProcessChampions(Dictionary<int, string> allChampions) //Adds spaces to champions; Example : 'TwistedFate' --> 'Twisted Fate'
+        {
+            Dictionary<int, string> processedChampions = new Dictionary<int, string>();
+
+            foreach (int key in allChampions.Keys)
+            {
+                keys.TryGetValue(key, out string champName);
+
+                if (champName == "MonkeyKing")
+                {
+                    champName = "Wukong";
+                }
+
+                string newValue = Regex.Replace(champName, "([a-z])([A-Z])", "$1 $2");
+
+                processedChampions.Add(key, newValue);
+            }
+            return processedChampions;
         }
     }
 }
