@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Blue_Ward
 {
-    class Champion
+    public class Champion
     {
         public string type { get; set; }
         public string format { get; set; }

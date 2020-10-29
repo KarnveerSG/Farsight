@@ -32,6 +32,7 @@
             this.summonerAccounts = new System.Windows.Forms.ComboBox();
             this.addNewSummonerButton = new System.Windows.Forms.Button();
             this.addMatchHistoryButton = new System.Windows.Forms.Button();
+            this.activeGameButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // summonerAccounts
@@ -66,11 +67,23 @@
             this.addMatchHistoryButton.UseVisualStyleBackColor = true;
             this.addMatchHistoryButton.Click += new System.EventHandler(this.addMatchHistoryButton_Click);
             // 
+            // activeGameButton
+            // 
+            this.activeGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.activeGameButton.Location = new System.Drawing.Point(203, 81);
+            this.activeGameButton.Name = "activeGameButton";
+            this.activeGameButton.Size = new System.Drawing.Size(185, 31);
+            this.activeGameButton.TabIndex = 3;
+            this.activeGameButton.Text = "Active Game";
+            this.activeGameButton.UseVisualStyleBackColor = true;
+            this.activeGameButton.Click += new System.EventHandler(this.activeGameButton_Click);
+            // 
             // mainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.activeGameButton);
             this.Controls.Add(this.addMatchHistoryButton);
             this.Controls.Add(this.addNewSummonerButton);
             this.Controls.Add(this.summonerAccounts);
@@ -87,5 +100,6 @@
         private System.Windows.Forms.ComboBox summonerAccounts;
         private System.Windows.Forms.Button addNewSummonerButton;
         private System.Windows.Forms.Button addMatchHistoryButton;
+        private System.Windows.Forms.Button activeGameButton;
     }
 }

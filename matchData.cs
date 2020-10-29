@@ -33,6 +33,9 @@ namespace Blue_Ward
             public int participantId { get; set; }
             public int championId { get; set; }
 
+            public string summonerName { get; set; }
+            public string championName { get; set; }
+
             public ParticipantTimelineDto timeline { get; set; }
 
             public ParticipantStatsDto stats { get; set; }

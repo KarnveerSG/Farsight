@@ -7,13 +7,11 @@ namespace Blue_Ward
     {
         private User[] userList = new User[5];
         int currentUserIndex = 0;
+        Champion champion = new Champion();
 
         public mainScreen()
         {
-
             InitializeComponent();
-
-            Champion champion = new Champion();
             champion.DeserialiseJSON(JSONParser.ChampionsFull());
         }
 
@@ -58,8 +56,19 @@ namespace Blue_Ward
             }
             else
             {
-                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[currentUserIndex - 1].accountId);
+                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[currentUserIndex - 1].accountId, champion);
                 newWindow.Show();
+            }
+        }
+
+        private void activeGameButton_Click(object sender, EventArgs e)
+        {
+            if (userList[0] == null)
+            {
+                MessageBox.Show("Atleast one summoner must be added before viewing match history!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else {
+                newActiveGameWindow newGameWindow = new newActiveGameWindow(userList[currentUserIndex - 1].id, champion);
             }
         }
     }

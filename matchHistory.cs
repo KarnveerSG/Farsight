@@ -15,6 +15,7 @@ namespace Blue_Ward
             public string role { get; set; }
             public int season { get; set; }
             public int champion { get; set; }
+            public string championName { get; set; }
             public string platformId { get; set; }
             public string queue { get; set; }
             public string lane { get; set; }
