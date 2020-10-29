@@ -24,7 +24,7 @@ namespace Blue_Ward
             public string summonerId { get; set; }
             public long spell1Id { get; set; }          //Summoner Spells
             public long spell2Id { get; set; }         //Summoner Spells
-            public Perks perk { get; set; }
+            public Perks perks { get; set; }
 
             public class Perks {
                 public long perkStyle { get; set; }         //Primary rune tree
