@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
 namespace Blue_Ward
@@ -31,10 +30,6 @@ namespace Blue_Ward
             {
                 Console.WriteLine("Champion key: " + champions.Key + " - " + champions.Value);
             }
-
-            string testString = "TwistedFate";
-            string newValue = Regex.Replace(testString, "([a-z])([A-Z])", "$1 $2");
-            Console.WriteLine("Spaces added -->: " + newValue);
         }
 
         public Dictionary<int, string> ProcessChampions(Dictionary<int, string> allChampions) //Adds spaces to champions; Example : 'TwistedFate' --> 'Twisted Fate'
