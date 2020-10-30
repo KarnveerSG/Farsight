@@ -13,6 +13,7 @@ namespace Blue_Ward
         private CurrentGameStats stats = new CurrentGameStats();
         private List<championMastery> fullChampionMasteryList = new List<championMastery>();
         private List<currentChampMastery> currentChamp = new List<currentChampMastery>();
+        private string apiKey = "RGAPI-c25b1f5f-c9d5-404d-97cc-8128a12c8c71";
 
         Champion champion = new Champion();
         public newActiveGameWindow(string accountId, Champion champion)
@@ -58,7 +59,7 @@ namespace Blue_Ward
 
         public async Task PopulateGameStats(string accountId)
         {
-            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/" + accountId + "?api_key=RGAPI-773a429c-c92d-49be-926c-b9275c8a0e3d");
+            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/" + accountId + "?api_key=" + apiKey);
             if (response != null)
             {
                 string jsonString = await response.Content.ReadAsStringAsync();
@@ -80,7 +81,7 @@ namespace Blue_Ward
         }
         public async Task PopulateChampionMasteryHistory(string ID, int index)
         {
-            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/" + ID + "?api_key=RGAPI-773a429c-c92d-49be-926c-b9275c8a0e3d");
+            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/" + ID + "?api_key=" + apiKey);
             if (response != null)
             {
                 championMastery temp = new championMastery();

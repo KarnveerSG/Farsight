@@ -11,6 +11,7 @@ namespace Blue_Ward
         private string summonerName;
         User user = new User();
         private mainScreen mainScreen;
+        private string apiKey = "RGAPI-c25b1f5f-c9d5-404d-97cc-8128a12c8c71";
 
         public newSummonerWindow()
         {
@@ -38,7 +39,7 @@ namespace Blue_Ward
         public async Task PopulateUser()
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=RGAPI-773a429c-c92d-49be-926c-b9275c8a0e3d");
+            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=" + apiKey);
 
             if (response != null)
             {
@@ -46,6 +47,24 @@ namespace Blue_Ward
 
                 user = JsonConvert.DeserializeObject<User>(jsonString);
                 this.mainScreen.setSummoner(user);
+            }
+        }
+
+        private void summonerNameTxtBox_Click(object sender, EventArgs e)
+        {
+            summonerNameTxtBox.Text = "";
+        }
+
+        private void newSummonerWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void summonerNameTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender, e);
             }
         }
     }

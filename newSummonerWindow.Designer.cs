@@ -53,6 +53,8 @@
             this.summonerNameTxtBox.TabIndex = 1;
             this.summonerNameTxtBox.Text = "Add New Summoner";
             this.summonerNameTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.summonerNameTxtBox.Click += new System.EventHandler(this.summonerNameTxtBox_Click);
+            this.summonerNameTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.summonerNameTxtBox_KeyDown);
             // 
             // newSummonerWindow
             // 
@@ -64,6 +66,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "newSummonerWindow";
             this.Text = "Add New Summoner";
+            this.Load += new System.EventHandler(this.newSummonerWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -54,11 +54,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(379, 160);
             this.Controls.Add(this.matchHistoryButton);
             this.Controls.Add(this.matchNumberBox);
             this.Name = "newMatchHistoryWindow";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.newMatchHistoryWindow_Load);
             this.ResumeLayout(false);
 
         }
