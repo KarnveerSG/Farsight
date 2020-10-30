@@ -11,13 +11,13 @@ namespace Blue_Ward
 
         public mainScreen()
         {
+            for(int i = 0; i < userList.Length; i++)
+            {
+                userList[i] = new User();
+            }
+
             InitializeComponent();
             champion.DeserialiseJSON(JSONParser.ChampionsFull());
-        }
-
-        public void AddNewSummoner(User newUser)
-        {
-            setSummoner(newUser);
         }
 
         private void mainScreen_Load(object sender, EventArgs e)
@@ -33,9 +33,18 @@ namespace Blue_Ward
 
         public void setSummoner(User user)
         {
+            for(int i = 0; i < userList.Length; i++)
+            {
+                if(user.name == userList[i].name && userList != null)
+                {
+                    Console.WriteLine("Summoner Already Added");    //change into window popup
+                    return;
+                }
+            }
+
             if (currentUserIndex >= 5)
             {
-                Console.WriteLine("Too many summoners");
+                Console.WriteLine("Too many summoners");    //change into window popup
             }
             else
             {
