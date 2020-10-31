@@ -12,6 +12,7 @@ namespace Blue_Ward
         private HttpClient client = new HttpClient();
         private matchHistory matchHistory = new matchHistory();
         private matchData matchData = new matchData();
+        private List<matchData> allMatchData = new List<matchData>();
         private List<championMastery> championMasteryList = new List<championMastery>();
         Champion champion = new Champion();
         private string apiKey = "RGAPI-7842efec-8a88-4be0-89c0-b6448e6fe168";
@@ -24,7 +25,7 @@ namespace Blue_Ward
 
             for (int i = 1; i <= 100; i++)
             {
-                matchNumberBox.Items.Add(i);
+                matchNumberBox.Items.Add(i);   
             }
         }
 
@@ -88,24 +89,29 @@ namespace Blue_Ward
 
         public async Task PopulateSelectedMatchHistory()
         {
-            HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/match/v4/matches/" + matchHistory.matches[matchNumberBox.SelectedIndex].gameId + "?api_key=" + apiKey);
-
-            if (response != null)
+            for (int k = 0; k < matchHistory.endIndex; k++)
             {
-                string jsonString = await response.Content.ReadAsStringAsync();
+                HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/match/v4/matches/" + matchHistory.matches[k].gameId + "?api_key=" + apiKey);
 
-                matchData = JsonConvert.DeserializeObject<matchData>(jsonString);
-                for (int i = 0; i < 10; i++)
+                if (response != null)
                 {
-                    string temp = "";
-                    champion.keys.TryGetValue(matchData.participants[i].championId, out temp);
-                    matchData.participants[i].championName = temp;
-                    matchData.participants[i].summonerName = matchData.participantIdentities[i].player.summonerName;
-                }
+                    string jsonString = await response.Content.ReadAsStringAsync();
 
-                for (int i = 0; i < 10; i++)
-                {
-                    await createChampionMasteryHistory(matchData.participantIdentities[i].player.summonerId, i); //Finds champion mastery data for all 10 participants in a game
+                    matchData = JsonConvert.DeserializeObject<matchData>(jsonString);
+                    for (int i = 0; i < 10; i++)
+                    {
+                        string temp = "";
+                        champion.keys.TryGetValue(matchData.participants[i].championId, out temp);
+                        matchData.participants[i].championName = temp;
+                        matchData.participants[i].summonerName = matchData.participantIdentities[i].player.summonerName;
+                    }
+
+                    for (int i = 0; i < 10; i++)
+                    {
+                        await createChampionMasteryHistory(matchData.participantIdentities[i].player.summonerId, i); //Finds champion mastery data for all 10 participants in a game
+                    }
+
+                    allMatchData.Add(matchData);
                 }
             }
         }
