@@ -29,13 +29,13 @@ namespace Blue_Ward
             {
                 matchUserControl matchUserControl = new matchUserControl();
 
-                matchUserControl.championPictureBox.Image = Images.ChampionImage("Aatrox");
+                matchUserControl.championPictureBox.Image = Images.ChampionImage("Darius");
 
                 matchUserControl.primaryRunePictureBox.Image = Images.PrimaryRuneTree("7201_Precision");
                 matchUserControl.secondaryRunePictureBox.Image = Images.SecondaryRuneTree("7204_Resolve");
 
-                matchUserControl.KDALabel.Text = "1.3 KDA";
-                matchUserControl.KPLabel.Text = "2 KP";
+                matchUserControl.KDALabel.Text = "2.5 KDA";
+                matchUserControl.KPLabel.Text = "6 KP";
 
                 matchUserControl.item1PictureBox.Image = Images.Item(3071);
                 matchUserControl.item2PictureBox.Image = Images.Item(3812);

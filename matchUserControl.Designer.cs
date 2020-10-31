@@ -64,6 +64,7 @@ namespace Blue_Ward
             this.champ7PictureBox = new System.Windows.Forms.PictureBox();
             this.champ6Label = new System.Windows.Forms.Label();
             this.champ6PictureBox = new System.Windows.Forms.PictureBox();
+            this.gameOutcomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.championPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.primaryRunePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondaryRunePictureBox)).BeginInit();
@@ -102,7 +103,7 @@ namespace Blue_Ward
             this.KDALabel.AutoSize = true;
             this.KDALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KDALabel.ForeColor = System.Drawing.Color.White;
-            this.KDALabel.Location = new System.Drawing.Point(260, 66);
+            this.KDALabel.Location = new System.Drawing.Point(233, 78);
             this.KDALabel.Name = "KDALabel";
             this.KDALabel.Size = new System.Drawing.Size(38, 18);
             this.KDALabel.TabIndex = 1;
@@ -114,7 +115,7 @@ namespace Blue_Ward
             this.KPLabel.AutoSize = true;
             this.KPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KPLabel.ForeColor = System.Drawing.Color.White;
-            this.KPLabel.Location = new System.Drawing.Point(260, 90);
+            this.KPLabel.Location = new System.Drawing.Point(233, 106);
             this.KPLabel.Name = "KPLabel";
             this.KPLabel.Size = new System.Drawing.Size(28, 18);
             this.KPLabel.TabIndex = 2;
@@ -123,9 +124,9 @@ namespace Blue_Ward
             // primaryRunePictureBox
             // 
             this.primaryRunePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.primaryRunePictureBox.Location = new System.Drawing.Point(129, 39);
+            this.primaryRunePictureBox.Location = new System.Drawing.Point(129, 50);
             this.primaryRunePictureBox.Name = "primaryRunePictureBox";
-            this.primaryRunePictureBox.Size = new System.Drawing.Size(45, 45);
+            this.primaryRunePictureBox.Size = new System.Drawing.Size(34, 34);
             this.primaryRunePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.primaryRunePictureBox.TabIndex = 3;
             this.primaryRunePictureBox.TabStop = false;
@@ -135,7 +136,7 @@ namespace Blue_Ward
             this.secondaryRunePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.secondaryRunePictureBox.Location = new System.Drawing.Point(129, 90);
             this.secondaryRunePictureBox.Name = "secondaryRunePictureBox";
-            this.secondaryRunePictureBox.Size = new System.Drawing.Size(45, 45);
+            this.secondaryRunePictureBox.Size = new System.Drawing.Size(34, 34);
             this.secondaryRunePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.secondaryRunePictureBox.TabIndex = 4;
             this.secondaryRunePictureBox.TabStop = false;
@@ -143,9 +144,9 @@ namespace Blue_Ward
             // spell1PictureBox
             // 
             this.spell1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.spell1PictureBox.Location = new System.Drawing.Point(180, 39);
+            this.spell1PictureBox.Location = new System.Drawing.Point(169, 50);
             this.spell1PictureBox.Name = "spell1PictureBox";
-            this.spell1PictureBox.Size = new System.Drawing.Size(45, 45);
+            this.spell1PictureBox.Size = new System.Drawing.Size(34, 34);
             this.spell1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spell1PictureBox.TabIndex = 5;
             this.spell1PictureBox.TabStop = false;
@@ -153,9 +154,9 @@ namespace Blue_Ward
             // spell2PictureBox
             // 
             this.spell2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.spell2PictureBox.Location = new System.Drawing.Point(180, 90);
+            this.spell2PictureBox.Location = new System.Drawing.Point(169, 90);
             this.spell2PictureBox.Name = "spell2PictureBox";
-            this.spell2PictureBox.Size = new System.Drawing.Size(45, 45);
+            this.spell2PictureBox.Size = new System.Drawing.Size(34, 34);
             this.spell2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spell2PictureBox.TabIndex = 6;
             this.spell2PictureBox.TabStop = false;
@@ -163,9 +164,9 @@ namespace Blue_Ward
             // item1PictureBox
             // 
             this.item1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.item1PictureBox.Location = new System.Drawing.Point(350, 51);
+            this.item1PictureBox.Location = new System.Drawing.Point(330, 40);
             this.item1PictureBox.Name = "item1PictureBox";
-            this.item1PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item1PictureBox.Size = new System.Drawing.Size(43, 41);
             this.item1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item1PictureBox.TabIndex = 7;
             this.item1PictureBox.TabStop = false;
@@ -173,9 +174,9 @@ namespace Blue_Ward
             // item2PictureBox
             // 
             this.item2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.item2PictureBox.Location = new System.Drawing.Point(390, 51);
+            this.item2PictureBox.Location = new System.Drawing.Point(379, 40);
             this.item2PictureBox.Name = "item2PictureBox";
-            this.item2PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item2PictureBox.Size = new System.Drawing.Size(43, 41);
             this.item2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item2PictureBox.TabIndex = 8;
             this.item2PictureBox.TabStop = false;
@@ -183,9 +184,9 @@ namespace Blue_Ward
             // item3PictureBox
             // 
             this.item3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.item3PictureBox.Location = new System.Drawing.Point(430, 51);
+            this.item3PictureBox.Location = new System.Drawing.Point(428, 40);
             this.item3PictureBox.Name = "item3PictureBox";
-            this.item3PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item3PictureBox.Size = new System.Drawing.Size(43, 41);
             this.item3PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item3PictureBox.TabIndex = 9;
             this.item3PictureBox.TabStop = false;
@@ -193,9 +194,9 @@ namespace Blue_Ward
             // wardPictureBox
             // 
             this.wardPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.wardPictureBox.Location = new System.Drawing.Point(470, 71);
+            this.wardPictureBox.Location = new System.Drawing.Point(477, 68);
             this.wardPictureBox.Name = "wardPictureBox";
-            this.wardPictureBox.Size = new System.Drawing.Size(34, 33);
+            this.wardPictureBox.Size = new System.Drawing.Size(43, 41);
             this.wardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wardPictureBox.TabIndex = 10;
             this.wardPictureBox.TabStop = false;
@@ -203,9 +204,9 @@ namespace Blue_Ward
             // item4PictureBox
             // 
             this.item4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.item4PictureBox.Location = new System.Drawing.Point(350, 90);
+            this.item4PictureBox.Location = new System.Drawing.Point(330, 87);
             this.item4PictureBox.Name = "item4PictureBox";
-            this.item4PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item4PictureBox.Size = new System.Drawing.Size(43, 41);
             this.item4PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item4PictureBox.TabIndex = 11;
             this.item4PictureBox.TabStop = false;
@@ -213,9 +214,9 @@ namespace Blue_Ward
             // item5PictureBox
             // 
             this.item5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.item5PictureBox.Location = new System.Drawing.Point(390, 90);
+            this.item5PictureBox.Location = new System.Drawing.Point(379, 87);
             this.item5PictureBox.Name = "item5PictureBox";
-            this.item5PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item5PictureBox.Size = new System.Drawing.Size(43, 41);
             this.item5PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item5PictureBox.TabIndex = 12;
             this.item5PictureBox.TabStop = false;
@@ -223,9 +224,9 @@ namespace Blue_Ward
             // item6PictureBox
             // 
             this.item6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.item6PictureBox.Location = new System.Drawing.Point(430, 90);
+            this.item6PictureBox.Location = new System.Drawing.Point(428, 87);
             this.item6PictureBox.Name = "item6PictureBox";
-            this.item6PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item6PictureBox.Size = new System.Drawing.Size(43, 41);
             this.item6PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item6PictureBox.TabIndex = 13;
             this.item6PictureBox.TabStop = false;
@@ -430,12 +431,24 @@ namespace Blue_Ward
             this.champ6PictureBox.TabIndex = 35;
             this.champ6PictureBox.TabStop = false;
             // 
+            // gameOutcomeLabel
+            // 
+            this.gameOutcomeLabel.AutoSize = true;
+            this.gameOutcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameOutcomeLabel.ForeColor = System.Drawing.Color.Blue;
+            this.gameOutcomeLabel.Location = new System.Drawing.Point(221, 28);
+            this.gameOutcomeLabel.Name = "gameOutcomeLabel";
+            this.gameOutcomeLabel.Size = new System.Drawing.Size(79, 26);
+            this.gameOutcomeLabel.TabIndex = 45;
+            this.gameOutcomeLabel.Text = "Victory";
+            // 
             // matchUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.gameOutcomeLabel);
             this.Controls.Add(this.champ10Label);
             this.Controls.Add(this.champ10PictureBox);
             this.Controls.Add(this.champ9Label);
@@ -536,5 +549,6 @@ namespace Blue_Ward
         public PictureBox champ7PictureBox;
         public Label champ6Label;
         public PictureBox champ6PictureBox;
+        private Label gameOutcomeLabel;
     }
 }
