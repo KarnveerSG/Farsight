@@ -59,7 +59,6 @@
             this.Controls.Add(this.matchNumberBox);
             this.Name = "newMatchHistoryWindow";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.newMatchHistoryWindow_Load);
             this.ResumeLayout(false);
 
         }
