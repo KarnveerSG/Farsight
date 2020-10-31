@@ -9,5 +9,10 @@ namespace Blue_Ward
         {
             InitializeComponent();
         }
+
+        private void matchUserControl_Click(object sender, System.EventArgs e)
+        {
+            MessageBox.Show("User clicked on a match");
+        }
     }
 }

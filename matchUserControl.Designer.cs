@@ -101,6 +101,7 @@ namespace Blue_Ward
             // 
             this.KDALabel.AutoSize = true;
             this.KDALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KDALabel.ForeColor = System.Drawing.Color.White;
             this.KDALabel.Location = new System.Drawing.Point(260, 66);
             this.KDALabel.Name = "KDALabel";
             this.KDALabel.Size = new System.Drawing.Size(38, 18);
@@ -112,6 +113,7 @@ namespace Blue_Ward
             // 
             this.KPLabel.AutoSize = true;
             this.KPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KPLabel.ForeColor = System.Drawing.Color.White;
             this.KPLabel.Location = new System.Drawing.Point(260, 90);
             this.KPLabel.Name = "KPLabel";
             this.KPLabel.Size = new System.Drawing.Size(28, 18);
@@ -231,6 +233,7 @@ namespace Blue_Ward
             // champ1Label
             // 
             this.champ1Label.AutoSize = true;
+            this.champ1Label.ForeColor = System.Drawing.Color.White;
             this.champ1Label.Location = new System.Drawing.Point(573, 14);
             this.champ1Label.Name = "champ1Label";
             this.champ1Label.Size = new System.Drawing.Size(49, 13);
@@ -250,6 +253,7 @@ namespace Blue_Ward
             // champ2Label
             // 
             this.champ2Label.AutoSize = true;
+            this.champ2Label.ForeColor = System.Drawing.Color.White;
             this.champ2Label.Location = new System.Drawing.Point(573, 45);
             this.champ2Label.Name = "champ2Label";
             this.champ2Label.Size = new System.Drawing.Size(49, 13);
@@ -269,6 +273,7 @@ namespace Blue_Ward
             // champ3Label
             // 
             this.champ3Label.AutoSize = true;
+            this.champ3Label.ForeColor = System.Drawing.Color.White;
             this.champ3Label.Location = new System.Drawing.Point(573, 76);
             this.champ3Label.Name = "champ3Label";
             this.champ3Label.Size = new System.Drawing.Size(49, 13);
@@ -288,6 +293,7 @@ namespace Blue_Ward
             // champ4Label
             // 
             this.champ4Label.AutoSize = true;
+            this.champ4Label.ForeColor = System.Drawing.Color.White;
             this.champ4Label.Location = new System.Drawing.Point(573, 107);
             this.champ4Label.Name = "champ4Label";
             this.champ4Label.Size = new System.Drawing.Size(49, 13);
@@ -307,6 +313,7 @@ namespace Blue_Ward
             // champ5Label
             // 
             this.champ5Label.AutoSize = true;
+            this.champ5Label.ForeColor = System.Drawing.Color.White;
             this.champ5Label.Location = new System.Drawing.Point(573, 137);
             this.champ5Label.Name = "champ5Label";
             this.champ5Label.Size = new System.Drawing.Size(49, 13);
@@ -326,6 +333,7 @@ namespace Blue_Ward
             // champ10Label
             // 
             this.champ10Label.AutoSize = true;
+            this.champ10Label.ForeColor = System.Drawing.Color.White;
             this.champ10Label.Location = new System.Drawing.Point(698, 137);
             this.champ10Label.Name = "champ10Label";
             this.champ10Label.Size = new System.Drawing.Size(55, 13);
@@ -345,6 +353,7 @@ namespace Blue_Ward
             // champ9Label
             // 
             this.champ9Label.AutoSize = true;
+            this.champ9Label.ForeColor = System.Drawing.Color.White;
             this.champ9Label.Location = new System.Drawing.Point(698, 107);
             this.champ9Label.Name = "champ9Label";
             this.champ9Label.Size = new System.Drawing.Size(49, 13);
@@ -364,6 +373,7 @@ namespace Blue_Ward
             // champ8Label
             // 
             this.champ8Label.AutoSize = true;
+            this.champ8Label.ForeColor = System.Drawing.Color.White;
             this.champ8Label.Location = new System.Drawing.Point(698, 76);
             this.champ8Label.Name = "champ8Label";
             this.champ8Label.Size = new System.Drawing.Size(49, 13);
@@ -383,6 +393,7 @@ namespace Blue_Ward
             // champ7Label
             // 
             this.champ7Label.AutoSize = true;
+            this.champ7Label.ForeColor = System.Drawing.Color.White;
             this.champ7Label.Location = new System.Drawing.Point(698, 45);
             this.champ7Label.Name = "champ7Label";
             this.champ7Label.Size = new System.Drawing.Size(49, 13);
@@ -402,6 +413,7 @@ namespace Blue_Ward
             // champ6Label
             // 
             this.champ6Label.AutoSize = true;
+            this.champ6Label.ForeColor = System.Drawing.Color.White;
             this.champ6Label.Location = new System.Drawing.Point(698, 14);
             this.champ6Label.Name = "champ6Label";
             this.champ6Label.Size = new System.Drawing.Size(49, 13);
@@ -422,7 +434,8 @@ namespace Blue_Ward
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.champ10Label);
             this.Controls.Add(this.champ10PictureBox);
             this.Controls.Add(this.champ9Label);
@@ -457,8 +470,10 @@ namespace Blue_Ward
             this.Controls.Add(this.KPLabel);
             this.Controls.Add(this.KDALabel);
             this.Controls.Add(this.championPictureBox);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "matchUserControl";
-            this.Size = new System.Drawing.Size(784, 164);
+            this.Size = new System.Drawing.Size(782, 162);
+            this.Click += new System.EventHandler(this.matchUserControl_Click);
             ((System.ComponentModel.ISupportInitialize)(this.championPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.primaryRunePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondaryRunePictureBox)).EndInit();
