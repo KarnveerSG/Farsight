@@ -17,6 +17,14 @@ namespace Blue_Ward
             }
 
             InitializeComponent();
+            
+            matchHistoryFlowLayoutPanel.AutoScroll = true;
+            //this.matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
+            for (int i = 0; i < 20; i++)
+            {
+                matchUserControl matchUserControl = new matchUserControl();
+                matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
+            }
             champion.DeserialiseJSON(JSONParser.ChampionsFull());
         }
 

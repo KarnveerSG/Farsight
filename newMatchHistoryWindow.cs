@@ -14,7 +14,7 @@ namespace Blue_Ward
         private matchData matchData = new matchData();
         private List<championMastery> championMasteryList = new List<championMastery>();
         Champion champion = new Champion();
-        private string apiKey = "RGAPI-c25b1f5f-c9d5-404d-97cc-8128a12c8c71";
+        private string apiKey = "RGAPI-7842efec-8a88-4be0-89c0-b6448e6fe168";
 
         public newMatchHistoryWindow(string accountID, Champion champion)
         {
@@ -108,11 +108,6 @@ namespace Blue_Ward
                     await createChampionMasteryHistory(matchData.participantIdentities[i].player.summonerId, i); //Finds champion mastery data for all 10 participants in a game
                 }
             }
-        }
-
-        private void newMatchHistoryWindow_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

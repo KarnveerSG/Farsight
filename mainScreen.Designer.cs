@@ -33,6 +33,7 @@
             this.addNewSummonerButton = new System.Windows.Forms.Button();
             this.addMatchHistoryButton = new System.Windows.Forms.Button();
             this.activeGameButton = new System.Windows.Forms.Button();
+            this.matchHistoryFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // summonerAccounts
@@ -78,11 +79,19 @@
             this.activeGameButton.UseVisualStyleBackColor = true;
             this.activeGameButton.Click += new System.EventHandler(this.activeGameButton_Click);
             // 
+            // matchHistoryFlowLayoutPanel
+            // 
+            this.matchHistoryFlowLayoutPanel.Location = new System.Drawing.Point(394, 12);
+            this.matchHistoryFlowLayoutPanel.Name = "matchHistoryFlowLayoutPanel";
+            this.matchHistoryFlowLayoutPanel.Size = new System.Drawing.Size(818, 545);
+            this.matchHistoryFlowLayoutPanel.TabIndex = 4;
+            // 
             // mainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 304);
+            this.ClientSize = new System.Drawing.Size(1224, 569);
+            this.Controls.Add(this.matchHistoryFlowLayoutPanel);
             this.Controls.Add(this.activeGameButton);
             this.Controls.Add(this.addMatchHistoryButton);
             this.Controls.Add(this.addNewSummonerButton);
@@ -101,5 +110,6 @@
         private System.Windows.Forms.Button addNewSummonerButton;
         private System.Windows.Forms.Button addMatchHistoryButton;
         private System.Windows.Forms.Button activeGameButton;
+        private System.Windows.Forms.FlowLayoutPanel matchHistoryFlowLayoutPanel;
     }
 }

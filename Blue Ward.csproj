@@ -55,6 +55,12 @@
     <Compile Include="Champion.cs" />
     <Compile Include="currentChampMastery.cs" />
     <Compile Include="CurrentGameStats.cs" />
+    <Compile Include="matchUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="matchUserControl.Designer.cs">
+      <DependentUpon>matchUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="newActiveGameWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="mainScreen.resx">
       <DependentUpon>mainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="matchUserControl.resx">
+      <DependentUpon>matchUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newActiveGameWindow.resx">
       <DependentUpon>newActiveGameWindow.cs</DependentUpon>

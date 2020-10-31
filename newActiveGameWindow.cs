@@ -13,7 +13,7 @@ namespace Blue_Ward
         private CurrentGameStats stats = new CurrentGameStats();
         private List<championMastery> fullChampionMasteryList = new List<championMastery>();
         private List<currentChampMastery> currentChamp = new List<currentChampMastery>();
-        private string apiKey = "RGAPI-c25b1f5f-c9d5-404d-97cc-8128a12c8c71";
+        private string apiKey = "RGAPI-7842efec-8a88-4be0-89c0-b6448e6fe168";
 
         Champion champion = new Champion();
         public newActiveGameWindow(string accountId, Champion champion)
