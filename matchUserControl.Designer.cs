@@ -472,7 +472,7 @@ namespace Blue_Ward
             this.Controls.Add(this.championPictureBox);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "matchUserControl";
-            this.Size = new System.Drawing.Size(782, 162);
+            this.Size = new System.Drawing.Size(782, 166);
             this.Click += new System.EventHandler(this.matchUserControl_Click);
             ((System.ComponentModel.ISupportInitialize)(this.championPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.primaryRunePictureBox)).EndInit();

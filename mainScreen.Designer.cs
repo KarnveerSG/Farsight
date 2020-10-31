@@ -84,14 +84,14 @@
             this.matchHistoryFlowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.matchHistoryFlowLayoutPanel.Location = new System.Drawing.Point(394, 12);
             this.matchHistoryFlowLayoutPanel.Name = "matchHistoryFlowLayoutPanel";
-            this.matchHistoryFlowLayoutPanel.Size = new System.Drawing.Size(805, 670);
+            this.matchHistoryFlowLayoutPanel.Size = new System.Drawing.Size(805, 689);
             this.matchHistoryFlowLayoutPanel.TabIndex = 4;
             // 
             // mainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1205, 687);
+            this.ClientSize = new System.Drawing.Size(1205, 706);
             this.Controls.Add(this.matchHistoryFlowLayoutPanel);
             this.Controls.Add(this.activeGameButton);
             this.Controls.Add(this.addMatchHistoryButton);
