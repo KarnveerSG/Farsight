@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -13,13 +12,13 @@ namespace Blue_Ward
 
         public mainScreen()
         {
-            for(int i = 0; i < userList.Length; i++)
+            for (int i = 0; i < userList.Length; i++)
             {
                 userList[i] = new User();
             }
 
             InitializeComponent();
-            
+
             matchHistoryFlowLayoutPanel.AutoScroll = true;
 
             string workingDirectory = Environment.CurrentDirectory;
@@ -85,9 +84,9 @@ namespace Blue_Ward
 
         public void setSummoner(User user)
         {
-            for(int i = 0; i < userList.Length; i++)
+            for (int i = 0; i < userList.Length; i++)
             {
-                if(user.name == userList[i].name && userList != null)
+                if (user.name == userList[i].name && userList != null)
                 {
                     Console.WriteLine("Summoner Already Added");    //change into window popup
                     return;
@@ -128,7 +127,8 @@ namespace Blue_Ward
             {
                 MessageBox.Show("Atleast one summoner must be added before viewing match history!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else {
+            else
+            {
                 newActiveGameWindow newGameWindow = new newActiveGameWindow(userList[currentUserIndex - 1].id, champion);
             }
         }

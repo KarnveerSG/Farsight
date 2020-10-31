@@ -62,7 +62,7 @@ namespace Blue_Ward
 
         private void summonerNameTxtBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 button1_Click(sender, e);
             }
