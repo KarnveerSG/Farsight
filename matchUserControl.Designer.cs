@@ -101,17 +101,18 @@ namespace Blue_Ward
             // 
             this.KDALabel.AutoSize = true;
             this.KDALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KDALabel.Location = new System.Drawing.Point(231, 66);
+            this.KDALabel.Location = new System.Drawing.Point(260, 66);
             this.KDALabel.Name = "KDALabel";
-            this.KDALabel.Size = new System.Drawing.Size(113, 18);
+            this.KDALabel.Size = new System.Drawing.Size(38, 18);
             this.KDALabel.TabIndex = 1;
-            this.KDALabel.Text = "KDA as decimal";
+            this.KDALabel.Text = "KDA";
+            this.KDALabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // KPLabel
             // 
             this.KPLabel.AutoSize = true;
             this.KPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KPLabel.Location = new System.Drawing.Point(270, 94);
+            this.KPLabel.Location = new System.Drawing.Point(260, 90);
             this.KPLabel.Name = "KPLabel";
             this.KPLabel.Size = new System.Drawing.Size(28, 18);
             this.KPLabel.TabIndex = 2;
@@ -123,6 +124,7 @@ namespace Blue_Ward
             this.primaryRunePictureBox.Location = new System.Drawing.Point(129, 39);
             this.primaryRunePictureBox.Name = "primaryRunePictureBox";
             this.primaryRunePictureBox.Size = new System.Drawing.Size(45, 45);
+            this.primaryRunePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.primaryRunePictureBox.TabIndex = 3;
             this.primaryRunePictureBox.TabStop = false;
             // 
@@ -132,6 +134,7 @@ namespace Blue_Ward
             this.secondaryRunePictureBox.Location = new System.Drawing.Point(129, 90);
             this.secondaryRunePictureBox.Name = "secondaryRunePictureBox";
             this.secondaryRunePictureBox.Size = new System.Drawing.Size(45, 45);
+            this.secondaryRunePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.secondaryRunePictureBox.TabIndex = 4;
             this.secondaryRunePictureBox.TabStop = false;
             // 
@@ -141,6 +144,7 @@ namespace Blue_Ward
             this.spell1PictureBox.Location = new System.Drawing.Point(180, 39);
             this.spell1PictureBox.Name = "spell1PictureBox";
             this.spell1PictureBox.Size = new System.Drawing.Size(45, 45);
+            this.spell1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spell1PictureBox.TabIndex = 5;
             this.spell1PictureBox.TabStop = false;
             // 
@@ -150,6 +154,7 @@ namespace Blue_Ward
             this.spell2PictureBox.Location = new System.Drawing.Point(180, 90);
             this.spell2PictureBox.Name = "spell2PictureBox";
             this.spell2PictureBox.Size = new System.Drawing.Size(45, 45);
+            this.spell2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spell2PictureBox.TabIndex = 6;
             this.spell2PictureBox.TabStop = false;
             // 
@@ -159,6 +164,7 @@ namespace Blue_Ward
             this.item1PictureBox.Location = new System.Drawing.Point(350, 51);
             this.item1PictureBox.Name = "item1PictureBox";
             this.item1PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item1PictureBox.TabIndex = 7;
             this.item1PictureBox.TabStop = false;
             // 
@@ -168,6 +174,7 @@ namespace Blue_Ward
             this.item2PictureBox.Location = new System.Drawing.Point(390, 51);
             this.item2PictureBox.Name = "item2PictureBox";
             this.item2PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item2PictureBox.TabIndex = 8;
             this.item2PictureBox.TabStop = false;
             // 
@@ -177,6 +184,7 @@ namespace Blue_Ward
             this.item3PictureBox.Location = new System.Drawing.Point(430, 51);
             this.item3PictureBox.Name = "item3PictureBox";
             this.item3PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item3PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item3PictureBox.TabIndex = 9;
             this.item3PictureBox.TabStop = false;
             // 
@@ -186,6 +194,7 @@ namespace Blue_Ward
             this.wardPictureBox.Location = new System.Drawing.Point(470, 71);
             this.wardPictureBox.Name = "wardPictureBox";
             this.wardPictureBox.Size = new System.Drawing.Size(34, 33);
+            this.wardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wardPictureBox.TabIndex = 10;
             this.wardPictureBox.TabStop = false;
             // 
@@ -195,6 +204,7 @@ namespace Blue_Ward
             this.item4PictureBox.Location = new System.Drawing.Point(350, 90);
             this.item4PictureBox.Name = "item4PictureBox";
             this.item4PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item4PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item4PictureBox.TabIndex = 11;
             this.item4PictureBox.TabStop = false;
             // 
@@ -204,6 +214,7 @@ namespace Blue_Ward
             this.item5PictureBox.Location = new System.Drawing.Point(390, 90);
             this.item5PictureBox.Name = "item5PictureBox";
             this.item5PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item5PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item5PictureBox.TabIndex = 12;
             this.item5PictureBox.TabStop = false;
             // 
@@ -213,6 +224,7 @@ namespace Blue_Ward
             this.item6PictureBox.Location = new System.Drawing.Point(430, 90);
             this.item6PictureBox.Name = "item6PictureBox";
             this.item6PictureBox.Size = new System.Drawing.Size(34, 33);
+            this.item6PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.item6PictureBox.TabIndex = 13;
             this.item6PictureBox.TabStop = false;
             // 
@@ -231,6 +243,7 @@ namespace Blue_Ward
             this.champ1PictureBox.Location = new System.Drawing.Point(542, 9);
             this.champ1PictureBox.Name = "champ1PictureBox";
             this.champ1PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.champ1PictureBox.TabIndex = 25;
             this.champ1PictureBox.TabStop = false;
             // 
@@ -249,6 +262,7 @@ namespace Blue_Ward
             this.champ2PictureBox.Location = new System.Drawing.Point(542, 40);
             this.champ2PictureBox.Name = "champ2PictureBox";
             this.champ2PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.champ2PictureBox.TabIndex = 27;
             this.champ2PictureBox.TabStop = false;
             // 
@@ -267,6 +281,7 @@ namespace Blue_Ward
             this.champ3PictureBox.Location = new System.Drawing.Point(542, 71);
             this.champ3PictureBox.Name = "champ3PictureBox";
             this.champ3PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ3PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.champ3PictureBox.TabIndex = 29;
             this.champ3PictureBox.TabStop = false;
             // 
@@ -285,6 +300,7 @@ namespace Blue_Ward
             this.champ4PictureBox.Location = new System.Drawing.Point(542, 102);
             this.champ4PictureBox.Name = "champ4PictureBox";
             this.champ4PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ4PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.champ4PictureBox.TabIndex = 31;
             this.champ4PictureBox.TabStop = false;
             // 
@@ -303,6 +319,7 @@ namespace Blue_Ward
             this.champ5PictureBox.Location = new System.Drawing.Point(542, 132);
             this.champ5PictureBox.Name = "champ5PictureBox";
             this.champ5PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ5PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.champ5PictureBox.TabIndex = 33;
             this.champ5PictureBox.TabStop = false;
             // 
@@ -321,6 +338,7 @@ namespace Blue_Ward
             this.champ10PictureBox.Location = new System.Drawing.Point(667, 132);
             this.champ10PictureBox.Name = "champ10PictureBox";
             this.champ10PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ10PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.champ10PictureBox.TabIndex = 43;
             this.champ10PictureBox.TabStop = false;
             // 
@@ -339,6 +357,7 @@ namespace Blue_Ward
             this.champ9PictureBox.Location = new System.Drawing.Point(667, 102);
             this.champ9PictureBox.Name = "champ9PictureBox";
             this.champ9PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ9PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.champ9PictureBox.TabIndex = 41;
             this.champ9PictureBox.TabStop = false;
             // 
@@ -357,6 +376,7 @@ namespace Blue_Ward
             this.champ8PictureBox.Location = new System.Drawing.Point(667, 71);
             this.champ8PictureBox.Name = "champ8PictureBox";
             this.champ8PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ8PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.champ8PictureBox.TabIndex = 39;
             this.champ8PictureBox.TabStop = false;
             // 
@@ -375,6 +395,7 @@ namespace Blue_Ward
             this.champ7PictureBox.Location = new System.Drawing.Point(667, 40);
             this.champ7PictureBox.Name = "champ7PictureBox";
             this.champ7PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ7PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.champ7PictureBox.TabIndex = 37;
             this.champ7PictureBox.TabStop = false;
             // 
@@ -393,6 +414,7 @@ namespace Blue_Ward
             this.champ6PictureBox.Location = new System.Drawing.Point(667, 9);
             this.champ6PictureBox.Name = "champ6PictureBox";
             this.champ6PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ6PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.champ6PictureBox.TabIndex = 35;
             this.champ6PictureBox.TabStop = false;
             // 
