@@ -44,6 +44,11 @@ namespace Blue_Ward
             {
                 public string lane { get; set; }
                 public string role { get; set; }
+                public Dictionary<string, double> csDiffPerMinDeltas { get; set; }
+                public Dictionary<string, double> damageTakenDiffPerMinDeltas { get; set; }
+                public Dictionary<string, double> xpDiffPerMinDeltas { get; set; }
+                public Dictionary<string, double> creepsPerMinDeltas { get; set; }
+                public Dictionary<string, double> goldPerMinDeltas { get; set; }
             }
 
             public class ParticipantStatsDto
