@@ -549,6 +549,6 @@ namespace Blue_Ward
         public PictureBox champ7PictureBox;
         public Label champ6Label;
         public PictureBox champ6PictureBox;
-        private Label gameOutcomeLabel;
+        public Label gameOutcomeLabel;
     }
 }

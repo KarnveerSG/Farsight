@@ -34,6 +34,8 @@ namespace Blue_Ward
                 matchUserControl.primaryRunePictureBox.Image = Images.PrimaryRuneTree("7201_Precision");
                 matchUserControl.secondaryRunePictureBox.Image = Images.SecondaryRuneTree("7204_Resolve");
 
+
+                matchUserControl.gameOutcomeLabel.Text = "Victory";
                 matchUserControl.KDALabel.Text = "2.5 KDA";
                 matchUserControl.KPLabel.Text = "6 KP";
 
