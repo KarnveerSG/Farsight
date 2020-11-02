@@ -20,37 +20,37 @@ namespace Farsight
                 championName = "MonkeyKing";
             }
 
-            return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\img\champion\" + championName + ".png");
+            return Image.FromFile(projectDirectory + @"\Farsight\Images\img\champion\" + championName + ".png");
         }
 
         public static Image PrimaryRuneTree(string rune)
         {
-            return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\perk-images\Styles\" + rune + ".png");
+            return Image.FromFile(projectDirectory + @"\Farsight\Images\perk-images\Styles\" + rune + ".png");
         }
 
         public static Image SecondaryRuneTree(string rune)
         {
-            return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\perk-images\Styles\" + rune + ".png");
+            return Image.FromFile(projectDirectory + @"\Farsight\Images\perk-images\Styles\" + rune + ".png");
         }
 
         public static Image Item(int itemId)
         {
 
             if(itemId == 0){
-                return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\img\item\" + 4403 + ".png");
+                return Image.FromFile(projectDirectory + @"\Farsight\Images\img\item\" + 4403 + ".png");
             }
 
-            return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\img\item\" + itemId.ToString() + ".png");
+            return Image.FromFile(projectDirectory + @"\Farsight\Images\img\item\" + itemId.ToString() + ".png");
         }
 
         public static Image SummonerSpell(string spellName)
         {
-            return Image.FromFile(projectDirectory + @"\Blue-ward\Images\img\spell\" + spellName + ".png");
+            return Image.FromFile(projectDirectory + @"\Farsight\Images\img\spell\" + spellName + ".png");
         }
 
         public static Image SummonerProfileIcon(int iconId)
         {
-            return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\img\profileicon\" + iconId.ToString() + ".png");
+            return Image.FromFile(projectDirectory + @"\Farsight\Images\img\profileicon\" + iconId.ToString() + ".png");
             //SummonerBarrier = Barrier
             //SummonerBoost = Cleanse
             //SummunerDot = Ignite

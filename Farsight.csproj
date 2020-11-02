@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EEE9B95F-5787-4BAA-B4B2-85A14FD50E00}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Blue_Ward</RootNamespace>
-    <AssemblyName>Blue Ward</AssemblyName>
+    <RootNamespace>Farsight</RootNamespace>
+    <AssemblyName>Farsight</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -125,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="summonerInfoControl.resx">
       <DependentUpon>summonerInfoControl.cs</DependentUpon>

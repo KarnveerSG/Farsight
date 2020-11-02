@@ -18,7 +18,7 @@ namespace Farsight
             string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
             string jsonString = "";
 
-            using (StreamReader file = File.OpenText(projectDirectory + @"\Blue-Ward\Data\championFull.json"))
+            using (StreamReader file = File.OpenText(projectDirectory + @"\Farsight\Data\championFull.json"))
             using (JsonTextReader reader = new JsonTextReader(file))
             {
                 JObject jsonObject = (JObject)JToken.ReadFrom(reader);
