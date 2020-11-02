@@ -33,5 +33,25 @@ namespace Blue_Ward
         {
             return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\img\item\" + itemId.ToString() + ".png");
         }
+
+        public static Image SummonerSpell(string spellName)
+        {
+            return Image.FromFile(projectDirectory + @"\Blue-ward\Images\img\spell\" + spellName + ".png");
+        }
+
+        public static Image SummonerProfileIcon(int iconId)
+        {
+            return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\img\profileicon\" + iconId.ToString() + ".png");
+            //SummonerBarrier = Barrier
+            //SummonerBoost = Cleanse
+            //SummunerDot = Ignite
+            //SummonerExhaust = Exhaust
+            //SummonerFlash = Flash
+            //SummonerHaste = Ghost
+            //SummonerHeal = Heal
+            //SummonerMana = Clarity
+            //SummonerSmite = Smite
+            //SummonerTeleport = Teleport
+        }
     }
 }

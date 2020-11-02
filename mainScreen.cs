@@ -19,6 +19,11 @@ namespace Blue_Ward
 
             InitializeComponent();
 
+            summonerInfoControl summonerInfoControl = new summonerInfoControl();
+            summonerInfoControl.summonerProfileIconPictureBox.Image = Images.SummonerProfileIcon(4090);
+            summonerInfoControl.summonerNameLabel.Text = "aGarbageTruck";
+            this.summonerInfoPanel.Controls.Add(summonerInfoControl);
+
             matchHistoryFlowLayoutPanel.AutoScroll = true;
 
             string workingDirectory = Environment.CurrentDirectory;
@@ -29,15 +34,17 @@ namespace Blue_Ward
             {
                 matchUserControl matchUserControl = new matchUserControl();
 
-                matchUserControl.championPictureBox.Image = Images.ChampionImage("Darius");
+                matchUserControl.championPictureBox.Image = Images.ChampionImage("Kindred");
 
                 matchUserControl.primaryRunePictureBox.Image = Images.PrimaryRuneTree("7201_Precision");
                 matchUserControl.secondaryRunePictureBox.Image = Images.SecondaryRuneTree("7204_Resolve");
 
+                matchUserControl.spell1PictureBox.Image = Images.SummonerSpell("SummonerTeleport");
+                matchUserControl.spell2PictureBox.Image = Images.SummonerSpell("SummonerFlash");
 
                 matchUserControl.gameOutcomeLabel.Text = "Victory";
                 matchUserControl.KDALabel.Text = "2.5 KDA";
-                matchUserControl.KPLabel.Text = "6 KP";
+                matchUserControl.KPLabel.Text = "6.0 KP";
 
                 matchUserControl.item1PictureBox.Image = Images.Item(3071);
                 matchUserControl.item2PictureBox.Image = Images.Item(3812);
@@ -48,7 +55,7 @@ namespace Blue_Ward
                 matchUserControl.wardPictureBox.Image = Images.Item(3340);
 
                 matchUserControl.champ1PictureBox.Image = Images.ChampionImage("Aatrox");
-                matchUserControl.champ1Label.Text = "Aatrox";
+                matchUserControl.champ1Label.Text = "1111111111111111 - 5/4/2";
                 matchUserControl.champ2PictureBox.Image = Images.ChampionImage("Rammus");
                 matchUserControl.champ2Label.Text = "Rammus";
                 matchUserControl.champ3PictureBox.Image = Images.ChampionImage("LeeSin");
@@ -59,7 +66,7 @@ namespace Blue_Ward
                 matchUserControl.champ5Label.Text = "Darius";
 
                 matchUserControl.champ6PictureBox.Image = Images.ChampionImage("Senna");
-                matchUserControl.champ6Label.Text = "Senna";
+                matchUserControl.champ6Label.Text = "1111111111111111 - 5/4/2";
                 matchUserControl.champ7PictureBox.Image = Images.ChampionImage("Sona");
                 matchUserControl.champ7Label.Text = "Sona";
                 matchUserControl.champ8PictureBox.Image = Images.ChampionImage("Braum");

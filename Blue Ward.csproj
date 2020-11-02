@@ -92,6 +92,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="summonerInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="summonerInfoControl.Designer.cs">
+      <DependentUpon>summonerInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="mainScreen.resx">
       <DependentUpon>mainScreen.cs</DependentUpon>
@@ -117,6 +126,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="summonerInfoControl.resx">
+      <DependentUpon>summonerInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Data\champion.json" />
     <None Include="Data\championFull.json" />
     <None Include="Data\champion\Aatrox.json" />
@@ -8521,6 +8533,60 @@
     <Content Include="Images\perk-images\Styles\Sorcery\Unflinching\Unflinching.png" />
     <Content Include="Images\perk-images\Styles\Sorcery\Waterwalking\Waterwalking.png" />
     <Content Include="Images\perk-images\Template\7000.png" />
+    <Content Include="Images\ranked-emblems\Emblem_Bronze.png" />
+    <Content Include="Images\ranked-emblems\Emblem_Challenger.png" />
+    <Content Include="Images\ranked-emblems\Emblem_Diamond.png" />
+    <Content Include="Images\ranked-emblems\Emblem_Gold.png" />
+    <Content Include="Images\ranked-emblems\Emblem_Grandmaster.png" />
+    <Content Include="Images\ranked-emblems\Emblem_Iron.png" />
+    <Content Include="Images\ranked-emblems\Emblem_Master.png" />
+    <Content Include="Images\ranked-emblems\Emblem_Platinum.png" />
+    <Content Include="Images\ranked-emblems\Emblem_Silver.png" />
+    <Content Include="Images\ranked-positions\Position_Bronze-Bot.png" />
+    <Content Include="Images\ranked-positions\Position_Bronze-Jungle.png" />
+    <Content Include="Images\ranked-positions\Position_Bronze-Mid.png" />
+    <Content Include="Images\ranked-positions\Position_Bronze-Support.png" />
+    <Content Include="Images\ranked-positions\Position_Bronze-Top.png" />
+    <Content Include="Images\ranked-positions\Position_Challenger-Bot.png" />
+    <Content Include="Images\ranked-positions\Position_Challenger-Jungle.png" />
+    <Content Include="Images\ranked-positions\Position_Challenger-Mid.png" />
+    <Content Include="Images\ranked-positions\Position_Challenger-Support.png" />
+    <Content Include="Images\ranked-positions\Position_Challenger-Top.png" />
+    <Content Include="Images\ranked-positions\Position_Diamond-Bot.png" />
+    <Content Include="Images\ranked-positions\Position_Diamond-Jungle.png" />
+    <Content Include="Images\ranked-positions\Position_Diamond-Mid.png" />
+    <Content Include="Images\ranked-positions\Position_Diamond-Support.png" />
+    <Content Include="Images\ranked-positions\Position_Diamond-Top.png" />
+    <Content Include="Images\ranked-positions\Position_Gold-Bot.png" />
+    <Content Include="Images\ranked-positions\Position_Gold-Jungle.png" />
+    <Content Include="Images\ranked-positions\Position_Gold-Mid.png" />
+    <Content Include="Images\ranked-positions\Position_Gold-Support.png" />
+    <Content Include="Images\ranked-positions\Position_Gold-Top.png" />
+    <Content Include="Images\ranked-positions\Position_Grandmaster-Bot.png" />
+    <Content Include="Images\ranked-positions\Position_Grandmaster-Jungle.png" />
+    <Content Include="Images\ranked-positions\Position_Grandmaster-Mid.png" />
+    <Content Include="Images\ranked-positions\Position_Grandmaster-Support.png" />
+    <Content Include="Images\ranked-positions\Position_Grandmaster-Top.png" />
+    <Content Include="Images\ranked-positions\Position_Iron-Bot.png" />
+    <Content Include="Images\ranked-positions\Position_Iron-Jungle.png" />
+    <Content Include="Images\ranked-positions\Position_Iron-Mid.png" />
+    <Content Include="Images\ranked-positions\Position_Iron-Support.png" />
+    <Content Include="Images\ranked-positions\Position_Iron-Top.png" />
+    <Content Include="Images\ranked-positions\Position_Master-Bot.png" />
+    <Content Include="Images\ranked-positions\Position_Master-Jungle.png" />
+    <Content Include="Images\ranked-positions\Position_Master-Mid.png" />
+    <Content Include="Images\ranked-positions\Position_Master-Support.png" />
+    <Content Include="Images\ranked-positions\Position_Master-Top.png" />
+    <Content Include="Images\ranked-positions\Position_Plat-Bot.png" />
+    <Content Include="Images\ranked-positions\Position_Plat-Jungle.png" />
+    <Content Include="Images\ranked-positions\Position_Plat-Mid.png" />
+    <Content Include="Images\ranked-positions\Position_Plat-Support.png" />
+    <Content Include="Images\ranked-positions\Position_Plat-Top.png" />
+    <Content Include="Images\ranked-positions\Position_Silver-Bot.png" />
+    <Content Include="Images\ranked-positions\Position_Silver-Jungle.png" />
+    <Content Include="Images\ranked-positions\Position_Silver-Mid.png" />
+    <Content Include="Images\ranked-positions\Position_Silver-Support.png" />
+    <Content Include="Images\ranked-positions\Position_Silver-Top.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
