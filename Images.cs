@@ -16,6 +16,10 @@ namespace Blue_Ward
 
         public static Image ChampionImage(string championName)
         {
+            if (championName == "Wukong") {
+                championName = "MonkeyKing";
+            }
+
             return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\img\champion\" + championName + ".png");
         }
 
@@ -31,6 +35,11 @@ namespace Blue_Ward
 
         public static Image Item(int itemId)
         {
+
+            if(itemId == 0){
+                return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\img\item\" + 4403 + ".png");
+            }
+
             return Image.FromFile(projectDirectory + @"\Blue-Ward\Images\img\item\" + itemId.ToString() + ".png");
         }
 

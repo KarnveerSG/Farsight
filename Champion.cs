@@ -24,7 +24,7 @@ namespace Blue_Ward
             this.format = championInfo.format;
             this.version = championInfo.version;
             this.keys = championInfo.keys;
-            this.keys = ProcessChampions(this.keys);
+         //   this.keys = ProcessChampions(this.keys);
 
             foreach (KeyValuePair<int, string> champions in this.keys)
             {

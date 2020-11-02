@@ -8,6 +8,7 @@ namespace Blue_Ward
         public long gameDuration { get; set; }
         public List<ParticipantDto> participants { get; set; }
         public List<ParticipantIdentityDto> participantIdentities { get; set; }
+        public List<TeamStatsDto> teams { get; set; }
 
         public class ParticipantIdentityDto
         {
@@ -26,6 +27,11 @@ namespace Blue_Ward
                 public string summonerId { get; set; }
                 public string platformId { get; set; }
             }
+        }
+
+        public class TeamStatsDto 
+        { 
+            public int teamId { get; set; }
         }
 
         public class ParticipantDto

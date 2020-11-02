@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -10,6 +11,10 @@ namespace Blue_Ward
         int currentUserIndex = 0;
         Champion champion = new Champion();
 
+        private matchHistory matchHistory = new matchHistory();
+        private List<matchData> allMatchData = new List<matchData>();
+        private List<championMastery> championMasteryList = new List<championMastery>();
+
         public mainScreen()
         {
             for (int i = 0; i < userList.Length; i++)
@@ -18,66 +23,14 @@ namespace Blue_Ward
             }
 
             InitializeComponent();
-
-            summonerInfoControl summonerInfoControl = new summonerInfoControl();
-            summonerInfoControl.summonerProfileIconPictureBox.Image = Images.SummonerProfileIcon(4090);
-            summonerInfoControl.summonerNameLabel.Text = "aGarbageTruck";
-            this.summonerInfoPanel.Controls.Add(summonerInfoControl);
-
             matchHistoryFlowLayoutPanel.AutoScroll = true;
 
             string workingDirectory = Environment.CurrentDirectory;
             string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
 
-            //this.matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
-            for (int i = 0; i < 20; i++)
-            {
-                matchUserControl matchUserControl = new matchUserControl();
-
-                matchUserControl.championPictureBox.Image = Images.ChampionImage("Kindred");
-
-                matchUserControl.primaryRunePictureBox.Image = Images.PrimaryRuneTree("7201_Precision");
-                matchUserControl.secondaryRunePictureBox.Image = Images.SecondaryRuneTree("7204_Resolve");
-
-                matchUserControl.spell1PictureBox.Image = Images.SummonerSpell("SummonerTeleport");
-                matchUserControl.spell2PictureBox.Image = Images.SummonerSpell("SummonerFlash");
-
-                matchUserControl.gameOutcomeLabel.Text = "Victory";
-                matchUserControl.KDALabel.Text = "2.5 KDA";
-                matchUserControl.KPLabel.Text = "6.0 KP";
-
-                matchUserControl.item1PictureBox.Image = Images.Item(3071);
-                matchUserControl.item2PictureBox.Image = Images.Item(3812);
-                matchUserControl.item3PictureBox.Image = Images.Item(3047);
-                matchUserControl.item4PictureBox.Image = Images.Item(3053);
-                matchUserControl.item5PictureBox.Image = Images.Item(3026);
-                matchUserControl.item6PictureBox.Image = Images.Item(3065);
-                matchUserControl.wardPictureBox.Image = Images.Item(3340);
-
-                matchUserControl.champ1PictureBox.Image = Images.ChampionImage("Aatrox");
-                matchUserControl.champ1Label.Text = "1111111111111111 - 5/4/2";
-                matchUserControl.champ2PictureBox.Image = Images.ChampionImage("Rammus");
-                matchUserControl.champ2Label.Text = "Rammus";
-                matchUserControl.champ3PictureBox.Image = Images.ChampionImage("LeeSin");
-                matchUserControl.champ3Label.Text = "LeeSin";
-                matchUserControl.champ4PictureBox.Image = Images.ChampionImage("Amumu");
-                matchUserControl.champ4Label.Text = "Amumu";
-                matchUserControl.champ5PictureBox.Image = Images.ChampionImage("Darius");
-                matchUserControl.champ5Label.Text = "Darius";
-
-                matchUserControl.champ6PictureBox.Image = Images.ChampionImage("Senna");
-                matchUserControl.champ6Label.Text = "1111111111111111 - 5/4/2";
-                matchUserControl.champ7PictureBox.Image = Images.ChampionImage("Sona");
-                matchUserControl.champ7Label.Text = "Sona";
-                matchUserControl.champ8PictureBox.Image = Images.ChampionImage("Braum");
-                matchUserControl.champ8Label.Text = "Braum";
-                matchUserControl.champ9PictureBox.Image = Images.ChampionImage("Thresh");
-                matchUserControl.champ9Label.Text = "Thresh";
-                matchUserControl.champ10PictureBox.Image = Images.ChampionImage("Leona");
-                matchUserControl.champ10Label.Text = "Leona";
-                matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
-            }
             champion.DeserialiseJSON(JSONParser.ChampionsFull());
+
+            //this.matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
         }
 
         private void mainScreen_Load(object sender, EventArgs e)
@@ -125,7 +78,7 @@ namespace Blue_Ward
             }
             else
             {
-                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[currentUserIndex - 1].accountId, champion);
+                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[currentUserIndex - 1].accountId, champion, this);
                 newWindow.Show();
             }
         }
@@ -139,6 +92,98 @@ namespace Blue_Ward
             else
             {
                 newActiveGameWindow newGameWindow = new newActiveGameWindow(userList[currentUserIndex - 1].id, champion);
+            }
+        }
+
+        public void setData(matchHistory matchHistory, List<matchData> allMatchData, List<championMastery> championMasteryList)
+        {
+            this.matchHistory = matchHistory;
+            this.allMatchData = allMatchData;
+            this.championMasteryList = championMasteryList;
+            populateData();
+        }
+
+        private void populateData()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                int userIndex = -1;
+                for (int j = 0; j < 10; j++)
+                {
+                    if (userList[0].accountId == allMatchData[i].participantIdentities[j].player.currentAccountId)
+                    {
+                        string name = allMatchData[i].participantIdentities[j].player.summonerName;
+                        userIndex = j;
+                    }
+                }
+                matchUserControl matchUserControl = new matchUserControl();
+
+                summonerInfoControl summonerInfoControl = new summonerInfoControl();
+                summonerInfoControl.summonerProfileIconPictureBox.Image = Images.SummonerProfileIcon(allMatchData[i].participantIdentities[userIndex].player.profileIcon);
+                summonerInfoControl.summonerNameLabel.Text = allMatchData[i].participantIdentities[userIndex].player.summonerName;
+                summonerInfoControl.summonerRankLabel.Text = userList[currentUserIndex].summonerLevel.ToString();
+                this.summonerInfoPanel.Controls.Add(summonerInfoControl);
+
+                matchUserControl.championPictureBox.Image = Images.ChampionImage(matchHistory.matches[i].championName);
+
+                matchUserControl.primaryRunePictureBox.Image = Images.PrimaryRuneTree("7201_Precision");
+                matchUserControl.secondaryRunePictureBox.Image = Images.SecondaryRuneTree("7204_Resolve");
+
+                matchUserControl.spell1PictureBox.Image = Images.SummonerSpell("SummonerTeleport");
+                matchUserControl.spell2PictureBox.Image = Images.SummonerSpell("SummonerFlash");
+
+                if (allMatchData[i].participants[userIndex].stats.win)
+                {
+                    matchUserControl.gameOutcomeLabel.Text = "Victory!";
+                }
+                else
+                {
+                    matchUserControl.gameOutcomeLabel.Text = "Defeat!";
+                }
+
+                matchUserControl.KDALabel.Text = allMatchData[i].participants[userIndex].stats.kills.ToString();
+                matchUserControl.KPLabel.Text = (allMatchData[i].participants[userIndex].stats.kills + allMatchData[i].participants[userIndex].stats.assists).ToString();
+
+                matchUserControl.item1PictureBox.Image = Images.Item(allMatchData[i].participants[userIndex].stats.item0);
+                matchUserControl.item2PictureBox.Image = Images.Item(allMatchData[i].participants[userIndex].stats.item1);
+                matchUserControl.item3PictureBox.Image = Images.Item(allMatchData[i].participants[userIndex].stats.item2);
+                matchUserControl.item4PictureBox.Image = Images.Item(allMatchData[i].participants[userIndex].stats.item3);
+                matchUserControl.item5PictureBox.Image = Images.Item(allMatchData[i].participants[userIndex].stats.item4);
+                matchUserControl.item6PictureBox.Image = Images.Item(allMatchData[i].participants[userIndex].stats.item5);
+                matchUserControl.wardPictureBox.Image = Images.Item(allMatchData[i].participants[userIndex].stats.item6);
+
+                matchUserControl.champ1PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[0].championName);
+                matchUserControl.champ1Label.Text = allMatchData[i].participants[0].summonerName + "--" + allMatchData[i].participants[0].stats.kills
+                                                    + "/" + allMatchData[i].participants[0].stats.deaths + "/" + allMatchData[i].participants[0].stats.assists;
+                matchUserControl.champ2PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[1].championName);
+                matchUserControl.champ2Label.Text = allMatchData[i].participants[1].summonerName + "--" + allMatchData[i].participants[1].stats.kills
+                                                + "/" + allMatchData[i].participants[1].stats.deaths + "/" + allMatchData[i].participants[1].stats.assists;
+                matchUserControl.champ3PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[2].championName);
+                matchUserControl.champ3Label.Text = allMatchData[i].participants[2].summonerName + "--" + allMatchData[i].participants[2].stats.kills
+                                                + "/" + allMatchData[i].participants[2].stats.deaths + "/" + allMatchData[i].participants[2].stats.assists;
+                matchUserControl.champ4PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[3].championName);
+                matchUserControl.champ4Label.Text = allMatchData[i].participants[3].summonerName + "--" + allMatchData[i].participants[3].stats.kills
+                                                + "/" + allMatchData[i].participants[3].stats.deaths + "/" + allMatchData[i].participants[3].stats.assists;
+                matchUserControl.champ5PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[4].championName);
+                matchUserControl.champ5Label.Text = allMatchData[i].participants[4].summonerName + "--" + allMatchData[i].participants[4].stats.kills
+                                                + "/" + allMatchData[i].participants[4].stats.deaths + "/" + allMatchData[i].participants[4].stats.assists;
+
+                matchUserControl.champ6PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[5].championName);
+                matchUserControl.champ6Label.Text = allMatchData[i].participants[5].summonerName + "--" + allMatchData[i].participants[5].stats.kills
+                                                + "/" + allMatchData[i].participants[5].stats.deaths + "/" + allMatchData[i].participants[5].stats.assists;
+                matchUserControl.champ7PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[6].championName);
+                matchUserControl.champ7Label.Text = allMatchData[i].participants[6].summonerName + "--" + allMatchData[i].participants[6].stats.kills
+                                                + "/" + allMatchData[i].participants[6].stats.deaths + "/" + allMatchData[i].participants[6].stats.assists;
+                matchUserControl.champ8PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[7].championName);
+                matchUserControl.champ8Label.Text = allMatchData[i].participants[7].summonerName + "--" + allMatchData[i].participants[7].stats.kills
+                                                + "/" + allMatchData[i].participants[7].stats.deaths + "/" + allMatchData[i].participants[7].stats.assists;
+                matchUserControl.champ9PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[8].championName);
+                matchUserControl.champ9Label.Text = allMatchData[i].participants[8].summonerName + "--" + allMatchData[i].participants[8].stats.kills
+                                                + "/" + allMatchData[i].participants[8].stats.deaths + "/" + allMatchData[i].participants[8].stats.assists;
+                matchUserControl.champ10PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[9].championName);
+                matchUserControl.champ10Label.Text = allMatchData[i].participants[9].summonerName + "--" + allMatchData[i].participants[9].stats.kills
+                                                + "/" + allMatchData[i].participants[9].stats.deaths + "/" + allMatchData[i].participants[9].stats.assists;
+                matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
             }
         }
     }

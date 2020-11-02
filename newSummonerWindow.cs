@@ -11,7 +11,7 @@ namespace Blue_Ward
         private string summonerName;
         User user = new User();
         private mainScreen mainScreen;
-        private string apiKey = "RGAPI-853adbdd-5553-4b19-8b56-3a11c0fbea3b";
+        private string apiKey = "RGAPI-23deb3ef-cf46-4d60-9cc3-6e8824a9f7bb";
 
         public newSummonerWindow()
         {

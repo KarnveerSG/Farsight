@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,23 +16,34 @@ namespace Blue_Ward
         private List<matchData> allMatchData = new List<matchData>();
         private List<championMastery> championMasteryList = new List<championMastery>();
         Champion champion = new Champion();
-        private string apiKey = "RGAPI-7842efec-8a88-4be0-89c0-b6448e6fe168";
+        private mainScreen temp = new mainScreen();
+        private string apiKey = "RGAPI-23deb3ef-cf46-4d60-9cc3-6e8824a9f7bb";
 
-        public newMatchHistoryWindow(string accountID, Champion champion)
+        public newMatchHistoryWindow(string accountID, Champion champion, mainScreen theMainScreen)
         {
             InitializeComponent();
             this.champion = champion;
             createMatchHistory(accountID);
-
-            for (int i = 1; i <= 100; i++)
-            {
-                matchNumberBox.Items.Add(i);   
-            }
+            temp = theMainScreen;
         }
 
         public async void createMatchHistory(string accountID)
         {
             await PopulateMatchHistory(accountID);
+        }
+        private void matchHistoryButton_Click(object sender, EventArgs e)
+        {
+            createSelectedMatchHistory();           //Finds history for selected match & all champion masteries for all participants
+        }
+
+        public async Task createChampionMasteryHistory(string ID, int index)
+        {
+            await PopulateChampionMasteryHistory(ID, index);
+        }
+
+        public async void createSelectedMatchHistory()
+        {
+            await PopulateSelectedMatchHistory();
         }
 
         public async Task PopulateMatchHistory(string accountID)
@@ -52,18 +64,9 @@ namespace Blue_Ward
             }
         }
 
-        private void matchHistoryButton_Click(object sender, EventArgs e)
-        {
-            createSelectedMatchHistory();           //Finds history for selected match & all champion masteries for all participants
-        }
-
-        public async Task createChampionMasteryHistory(string ID, int index)
-        {
-            await PopulateChampionMasteryHistory(ID, index);
-        }
-
         public async Task PopulateChampionMasteryHistory(string ID, int index)
         {
+            Thread.Sleep(150);
             HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/" + ID + "?api_key=" + apiKey);
             if (response != null)
             {
@@ -72,7 +75,6 @@ namespace Blue_Ward
                 temp1.championMasteries = JsonConvert.DeserializeObject<List<championMastery.ChampionMasteryDTO>>(jsonString);
                 this.championMasteryList.Add(temp1);
                 this.championMasteryList[index].summonerName = matchData.participantIdentities[index].player.summonerName;      //Uses participant data to insert summoner name into mastery list 
-
             }
             for (int i = 0; i < this.championMasteryList[index].championMasteries.Count; i++)                           //This adds champion names to all champion IDs in mastery.
             {
@@ -82,15 +84,11 @@ namespace Blue_Ward
             }
         }
 
-        public async void createSelectedMatchHistory()
-        {
-            await PopulateSelectedMatchHistory();
-        }
-
         public async Task PopulateSelectedMatchHistory()
         {
-            for (int k = 0; k < matchHistory.endIndex; k++)
+            for (int k = 0; k < 5; k++)
             {
+                Thread.Sleep(100);
                 HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/match/v4/matches/" + matchHistory.matches[k].gameId + "?api_key=" + apiKey);
 
                 if (response != null)
@@ -114,6 +112,7 @@ namespace Blue_Ward
                     allMatchData.Add(matchData);
                 }
             }
+            temp.setData(matchHistory, allMatchData, championMasteryList);
         }
     }
 }
