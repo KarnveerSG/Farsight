@@ -1,4 +1,4 @@
-﻿namespace Blue_Ward
+﻿namespace Farsight
 {
     class currentChampMastery
     {

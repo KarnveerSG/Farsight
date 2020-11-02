@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Blue_Ward
+namespace Farsight
 {
     public class championMastery
     {

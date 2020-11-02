@@ -1,4 +1,4 @@
-﻿namespace Blue_Ward
+﻿namespace Farsight
 {
     partial class mainScreen
     {
@@ -86,7 +86,7 @@
             this.matchHistoryFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.matchHistoryFlowLayoutPanel.Location = new System.Drawing.Point(392, 0);
             this.matchHistoryFlowLayoutPanel.Name = "matchHistoryFlowLayoutPanel";
-            this.matchHistoryFlowLayoutPanel.Size = new System.Drawing.Size(912, 688);
+            this.matchHistoryFlowLayoutPanel.Size = new System.Drawing.Size(979, 688);
             this.matchHistoryFlowLayoutPanel.TabIndex = 4;
             // 
             // summonerInfoPanel
@@ -102,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(1308, 688);
+            this.ClientSize = new System.Drawing.Size(1372, 688);
             this.Controls.Add(this.summonerInfoPanel);
             this.Controls.Add(this.matchHistoryFlowLayoutPanel);
             this.Controls.Add(this.activeGameButton);

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Blue_Ward
+namespace Farsight
 {
     public class Champion
     {

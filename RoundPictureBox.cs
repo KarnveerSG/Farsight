@@ -1,7 +1,7 @@
 ﻿using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace Blue_Ward
+namespace Farsight
 {
     public class RoundPictureBox : PictureBox
     {

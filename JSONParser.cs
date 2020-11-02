@@ -3,7 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
 
-namespace Blue_Ward
+namespace Farsight
 {
     class JSONParser
     {

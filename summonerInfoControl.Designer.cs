@@ -1,4 +1,4 @@
-﻿namespace Blue_Ward
+﻿namespace Farsight
 {
     partial class summonerInfoControl
     {
@@ -31,7 +31,7 @@
             this.summonerNameLabel = new System.Windows.Forms.Label();
             this.summonerRankLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.summonerProfileIconPictureBox = new Blue_Ward.RoundPictureBox();
+            this.summonerProfileIconPictureBox = new Farsight.RoundPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.summonerProfileIconPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +40,7 @@
             this.summonerNameLabel.AutoSize = true;
             this.summonerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summonerNameLabel.ForeColor = System.Drawing.Color.White;
-            this.summonerNameLabel.Location = new System.Drawing.Point(24, 144);
+            this.summonerNameLabel.Location = new System.Drawing.Point(16, 160);
             this.summonerNameLabel.Name = "summonerNameLabel";
             this.summonerNameLabel.Size = new System.Drawing.Size(173, 24);
             this.summonerNameLabel.TabIndex = 0;
@@ -51,16 +51,16 @@
             this.summonerRankLabel.AutoSize = true;
             this.summonerRankLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summonerRankLabel.ForeColor = System.Drawing.Color.White;
-            this.summonerRankLabel.Location = new System.Drawing.Point(80, 112);
+            this.summonerRankLabel.Location = new System.Drawing.Point(88, 120);
             this.summonerRankLabel.Name = "summonerRankLabel";
-            this.summonerRankLabel.Size = new System.Drawing.Size(36, 20);
+            this.summonerRankLabel.Size = new System.Drawing.Size(18, 20);
             this.summonerRankLabel.TabIndex = 2;
-            this.summonerRankLabel.Text = "220";
+            this.summonerRankLabel.Text = "0";
             // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(8, 176);
+            this.label1.Location = new System.Drawing.Point(8, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 2);
             this.label1.TabIndex = 3;

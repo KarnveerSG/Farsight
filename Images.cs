@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.IO;
 
-namespace Blue_Ward
+namespace Farsight
 {
     class Images
     {

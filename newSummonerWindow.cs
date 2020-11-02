@@ -4,14 +4,14 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Blue_Ward
+namespace Farsight
 {
     public partial class newSummonerWindow : Form
     {
         private string summonerName;
         User user = new User();
         private mainScreen mainScreen;
-        private string apiKey = "RGAPI-23deb3ef-cf46-4d60-9cc3-6e8824a9f7bb";
+        private string apiKey = "RGAPI-b4f06ce4-1106-4c69-8ee8-d407750b5d18";
 
         public newSummonerWindow()
         {

@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Blue_Ward
+namespace Farsight
 {
     public partial class newMatchHistoryWindow : Form
     {
@@ -17,7 +17,7 @@ namespace Blue_Ward
         private List<championMastery> championMasteryList = new List<championMastery>();
         Champion champion = new Champion();
         private mainScreen temp = new mainScreen();
-        private string apiKey = "RGAPI-23deb3ef-cf46-4d60-9cc3-6e8824a9f7bb";
+        private string apiKey = "RGAPI-b4f06ce4-1106-4c69-8ee8-d407750b5d18";
 
         public newMatchHistoryWindow(string accountID, Champion champion, mainScreen theMainScreen)
         {
@@ -88,7 +88,7 @@ namespace Blue_Ward
         {
             for (int k = 0; k < 5; k++)
             {
-                Thread.Sleep(100);
+                Thread.Sleep(150);
                 HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/match/v4/matches/" + matchHistory.matches[k].gameId + "?api_key=" + apiKey);
 
                 if (response != null)

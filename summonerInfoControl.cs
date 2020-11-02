@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Blue_Ward
+namespace Farsight
 {
     public partial class summonerInfoControl : UserControl
     {

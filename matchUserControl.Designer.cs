@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Blue_Ward
+namespace Farsight
 {
     partial class matchUserControl
     {
@@ -44,6 +44,8 @@ namespace Blue_Ward
             this.item4PictureBox = new System.Windows.Forms.PictureBox();
             this.item5PictureBox = new System.Windows.Forms.PictureBox();
             this.item6PictureBox = new System.Windows.Forms.PictureBox();
+            this.champ0Label = new System.Windows.Forms.Label();
+            this.champ0PictureBox = new System.Windows.Forms.PictureBox();
             this.champ1Label = new System.Windows.Forms.Label();
             this.champ1PictureBox = new System.Windows.Forms.PictureBox();
             this.champ2Label = new System.Windows.Forms.Label();
@@ -52,10 +54,6 @@ namespace Blue_Ward
             this.champ3PictureBox = new System.Windows.Forms.PictureBox();
             this.champ4Label = new System.Windows.Forms.Label();
             this.champ4PictureBox = new System.Windows.Forms.PictureBox();
-            this.champ5Label = new System.Windows.Forms.Label();
-            this.champ5PictureBox = new System.Windows.Forms.PictureBox();
-            this.champ10Label = new System.Windows.Forms.Label();
-            this.champ10PictureBox = new System.Windows.Forms.PictureBox();
             this.champ9Label = new System.Windows.Forms.Label();
             this.champ9PictureBox = new System.Windows.Forms.PictureBox();
             this.champ8Label = new System.Windows.Forms.Label();
@@ -64,6 +62,8 @@ namespace Blue_Ward
             this.champ7PictureBox = new System.Windows.Forms.PictureBox();
             this.champ6Label = new System.Windows.Forms.Label();
             this.champ6PictureBox = new System.Windows.Forms.PictureBox();
+            this.champ5Label = new System.Windows.Forms.Label();
+            this.champ5PictureBox = new System.Windows.Forms.PictureBox();
             this.gameOutcomeLabel = new System.Windows.Forms.Label();
             this.csDiffLabel = new System.Windows.Forms.Label();
             this.goldDiffLabel = new System.Windows.Forms.Label();
@@ -79,16 +79,16 @@ namespace Blue_Ward
             ((System.ComponentModel.ISupportInitialize)(this.item4PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item5PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item6PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.champ0PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ1PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ2PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ3PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ4PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.champ5PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.champ10PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ9PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ8PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ7PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ6PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.champ5PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // championPictureBox
@@ -232,25 +232,46 @@ namespace Blue_Ward
             this.item6PictureBox.TabIndex = 13;
             this.item6PictureBox.TabStop = false;
             // 
+            // champ0Label
+            // 
+            this.champ0Label.AutoSize = true;
+            this.champ0Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.champ0Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.champ0Label.Location = new System.Drawing.Point(527, 13);
+            this.champ0Label.Name = "champ0Label";
+            this.champ0Label.Size = new System.Drawing.Size(57, 15);
+            this.champ0Label.TabIndex = 26;
+            this.champ0Label.Text = "Champ 0";
+            // 
+            // champ0PictureBox
+            // 
+            this.champ0PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.champ0PictureBox.Location = new System.Drawing.Point(496, 8);
+            this.champ0PictureBox.Name = "champ0PictureBox";
+            this.champ0PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ0PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.champ0PictureBox.TabIndex = 25;
+            this.champ0PictureBox.TabStop = false;
+            // 
             // champ1Label
             // 
             this.champ1Label.AutoSize = true;
             this.champ1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.champ1Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.champ1Label.Location = new System.Drawing.Point(519, 14);
+            this.champ1Label.Location = new System.Drawing.Point(527, 44);
             this.champ1Label.Name = "champ1Label";
             this.champ1Label.Size = new System.Drawing.Size(57, 15);
-            this.champ1Label.TabIndex = 26;
+            this.champ1Label.TabIndex = 28;
             this.champ1Label.Text = "Champ 1";
             // 
             // champ1PictureBox
             // 
             this.champ1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.champ1PictureBox.Location = new System.Drawing.Point(488, 9);
+            this.champ1PictureBox.Location = new System.Drawing.Point(496, 39);
             this.champ1PictureBox.Name = "champ1PictureBox";
             this.champ1PictureBox.Size = new System.Drawing.Size(25, 25);
             this.champ1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.champ1PictureBox.TabIndex = 25;
+            this.champ1PictureBox.TabIndex = 27;
             this.champ1PictureBox.TabStop = false;
             // 
             // champ2Label
@@ -258,20 +279,20 @@ namespace Blue_Ward
             this.champ2Label.AutoSize = true;
             this.champ2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.champ2Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.champ2Label.Location = new System.Drawing.Point(519, 45);
+            this.champ2Label.Location = new System.Drawing.Point(527, 75);
             this.champ2Label.Name = "champ2Label";
             this.champ2Label.Size = new System.Drawing.Size(57, 15);
-            this.champ2Label.TabIndex = 28;
+            this.champ2Label.TabIndex = 30;
             this.champ2Label.Text = "Champ 2";
             // 
             // champ2PictureBox
             // 
             this.champ2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.champ2PictureBox.Location = new System.Drawing.Point(488, 40);
+            this.champ2PictureBox.Location = new System.Drawing.Point(496, 70);
             this.champ2PictureBox.Name = "champ2PictureBox";
             this.champ2PictureBox.Size = new System.Drawing.Size(25, 25);
             this.champ2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.champ2PictureBox.TabIndex = 27;
+            this.champ2PictureBox.TabIndex = 29;
             this.champ2PictureBox.TabStop = false;
             // 
             // champ3Label
@@ -279,20 +300,20 @@ namespace Blue_Ward
             this.champ3Label.AutoSize = true;
             this.champ3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.champ3Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.champ3Label.Location = new System.Drawing.Point(519, 76);
+            this.champ3Label.Location = new System.Drawing.Point(527, 106);
             this.champ3Label.Name = "champ3Label";
             this.champ3Label.Size = new System.Drawing.Size(57, 15);
-            this.champ3Label.TabIndex = 30;
+            this.champ3Label.TabIndex = 32;
             this.champ3Label.Text = "Champ 3";
             // 
             // champ3PictureBox
             // 
             this.champ3PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.champ3PictureBox.Location = new System.Drawing.Point(488, 71);
+            this.champ3PictureBox.Location = new System.Drawing.Point(496, 101);
             this.champ3PictureBox.Name = "champ3PictureBox";
             this.champ3PictureBox.Size = new System.Drawing.Size(25, 25);
             this.champ3PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.champ3PictureBox.TabIndex = 29;
+            this.champ3PictureBox.TabIndex = 31;
             this.champ3PictureBox.TabStop = false;
             // 
             // champ4Label
@@ -300,83 +321,41 @@ namespace Blue_Ward
             this.champ4Label.AutoSize = true;
             this.champ4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.champ4Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.champ4Label.Location = new System.Drawing.Point(519, 107);
+            this.champ4Label.Location = new System.Drawing.Point(527, 136);
             this.champ4Label.Name = "champ4Label";
             this.champ4Label.Size = new System.Drawing.Size(57, 15);
-            this.champ4Label.TabIndex = 32;
+            this.champ4Label.TabIndex = 34;
             this.champ4Label.Text = "Champ 4";
             // 
             // champ4PictureBox
             // 
             this.champ4PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.champ4PictureBox.Location = new System.Drawing.Point(488, 102);
+            this.champ4PictureBox.Location = new System.Drawing.Point(496, 131);
             this.champ4PictureBox.Name = "champ4PictureBox";
             this.champ4PictureBox.Size = new System.Drawing.Size(25, 25);
             this.champ4PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.champ4PictureBox.TabIndex = 31;
+            this.champ4PictureBox.TabIndex = 33;
             this.champ4PictureBox.TabStop = false;
-            // 
-            // champ5Label
-            // 
-            this.champ5Label.AutoSize = true;
-            this.champ5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.champ5Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.champ5Label.Location = new System.Drawing.Point(519, 137);
-            this.champ5Label.Name = "champ5Label";
-            this.champ5Label.Size = new System.Drawing.Size(57, 15);
-            this.champ5Label.TabIndex = 34;
-            this.champ5Label.Text = "Champ 5";
-            // 
-            // champ5PictureBox
-            // 
-            this.champ5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.champ5PictureBox.Location = new System.Drawing.Point(488, 132);
-            this.champ5PictureBox.Name = "champ5PictureBox";
-            this.champ5PictureBox.Size = new System.Drawing.Size(25, 25);
-            this.champ5PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.champ5PictureBox.TabIndex = 33;
-            this.champ5PictureBox.TabStop = false;
-            // 
-            // champ10Label
-            // 
-            this.champ10Label.AutoSize = true;
-            this.champ10Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.champ10Label.ForeColor = System.Drawing.Color.Orange;
-            this.champ10Label.Location = new System.Drawing.Point(719, 137);
-            this.champ10Label.Name = "champ10Label";
-            this.champ10Label.Size = new System.Drawing.Size(64, 15);
-            this.champ10Label.TabIndex = 44;
-            this.champ10Label.Text = "Champ 10";
-            // 
-            // champ10PictureBox
-            // 
-            this.champ10PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.champ10PictureBox.Location = new System.Drawing.Point(688, 132);
-            this.champ10PictureBox.Name = "champ10PictureBox";
-            this.champ10PictureBox.Size = new System.Drawing.Size(25, 25);
-            this.champ10PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.champ10PictureBox.TabIndex = 43;
-            this.champ10PictureBox.TabStop = false;
             // 
             // champ9Label
             // 
             this.champ9Label.AutoSize = true;
             this.champ9Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.champ9Label.ForeColor = System.Drawing.Color.Orange;
-            this.champ9Label.Location = new System.Drawing.Point(719, 107);
+            this.champ9Label.Location = new System.Drawing.Point(759, 136);
             this.champ9Label.Name = "champ9Label";
             this.champ9Label.Size = new System.Drawing.Size(57, 15);
-            this.champ9Label.TabIndex = 42;
+            this.champ9Label.TabIndex = 44;
             this.champ9Label.Text = "Champ 9";
             // 
             // champ9PictureBox
             // 
             this.champ9PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.champ9PictureBox.Location = new System.Drawing.Point(688, 102);
+            this.champ9PictureBox.Location = new System.Drawing.Point(728, 131);
             this.champ9PictureBox.Name = "champ9PictureBox";
             this.champ9PictureBox.Size = new System.Drawing.Size(25, 25);
             this.champ9PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.champ9PictureBox.TabIndex = 41;
+            this.champ9PictureBox.TabIndex = 43;
             this.champ9PictureBox.TabStop = false;
             // 
             // champ8Label
@@ -384,20 +363,20 @@ namespace Blue_Ward
             this.champ8Label.AutoSize = true;
             this.champ8Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.champ8Label.ForeColor = System.Drawing.Color.Orange;
-            this.champ8Label.Location = new System.Drawing.Point(719, 76);
+            this.champ8Label.Location = new System.Drawing.Point(759, 106);
             this.champ8Label.Name = "champ8Label";
             this.champ8Label.Size = new System.Drawing.Size(57, 15);
-            this.champ8Label.TabIndex = 40;
+            this.champ8Label.TabIndex = 42;
             this.champ8Label.Text = "Champ 8";
             // 
             // champ8PictureBox
             // 
             this.champ8PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.champ8PictureBox.Location = new System.Drawing.Point(688, 71);
+            this.champ8PictureBox.Location = new System.Drawing.Point(728, 101);
             this.champ8PictureBox.Name = "champ8PictureBox";
             this.champ8PictureBox.Size = new System.Drawing.Size(25, 25);
             this.champ8PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.champ8PictureBox.TabIndex = 39;
+            this.champ8PictureBox.TabIndex = 41;
             this.champ8PictureBox.TabStop = false;
             // 
             // champ7Label
@@ -405,20 +384,20 @@ namespace Blue_Ward
             this.champ7Label.AutoSize = true;
             this.champ7Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.champ7Label.ForeColor = System.Drawing.Color.Orange;
-            this.champ7Label.Location = new System.Drawing.Point(719, 45);
+            this.champ7Label.Location = new System.Drawing.Point(759, 75);
             this.champ7Label.Name = "champ7Label";
             this.champ7Label.Size = new System.Drawing.Size(57, 15);
-            this.champ7Label.TabIndex = 38;
+            this.champ7Label.TabIndex = 40;
             this.champ7Label.Text = "Champ 7";
             // 
             // champ7PictureBox
             // 
             this.champ7PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.champ7PictureBox.Location = new System.Drawing.Point(688, 40);
+            this.champ7PictureBox.Location = new System.Drawing.Point(728, 70);
             this.champ7PictureBox.Name = "champ7PictureBox";
             this.champ7PictureBox.Size = new System.Drawing.Size(25, 25);
             this.champ7PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.champ7PictureBox.TabIndex = 37;
+            this.champ7PictureBox.TabIndex = 39;
             this.champ7PictureBox.TabStop = false;
             // 
             // champ6Label
@@ -426,21 +405,42 @@ namespace Blue_Ward
             this.champ6Label.AutoSize = true;
             this.champ6Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.champ6Label.ForeColor = System.Drawing.Color.Orange;
-            this.champ6Label.Location = new System.Drawing.Point(719, 14);
+            this.champ6Label.Location = new System.Drawing.Point(759, 44);
             this.champ6Label.Name = "champ6Label";
             this.champ6Label.Size = new System.Drawing.Size(57, 15);
-            this.champ6Label.TabIndex = 36;
+            this.champ6Label.TabIndex = 38;
             this.champ6Label.Text = "Champ 6";
             // 
             // champ6PictureBox
             // 
             this.champ6PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.champ6PictureBox.Location = new System.Drawing.Point(688, 9);
+            this.champ6PictureBox.Location = new System.Drawing.Point(728, 39);
             this.champ6PictureBox.Name = "champ6PictureBox";
             this.champ6PictureBox.Size = new System.Drawing.Size(25, 25);
             this.champ6PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.champ6PictureBox.TabIndex = 35;
+            this.champ6PictureBox.TabIndex = 37;
             this.champ6PictureBox.TabStop = false;
+            // 
+            // champ5Label
+            // 
+            this.champ5Label.AutoSize = true;
+            this.champ5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.champ5Label.ForeColor = System.Drawing.Color.Orange;
+            this.champ5Label.Location = new System.Drawing.Point(759, 13);
+            this.champ5Label.Name = "champ5Label";
+            this.champ5Label.Size = new System.Drawing.Size(57, 15);
+            this.champ5Label.TabIndex = 36;
+            this.champ5Label.Text = "Champ 5";
+            // 
+            // champ5PictureBox
+            // 
+            this.champ5PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.champ5PictureBox.Location = new System.Drawing.Point(728, 8);
+            this.champ5PictureBox.Name = "champ5PictureBox";
+            this.champ5PictureBox.Size = new System.Drawing.Size(25, 25);
+            this.champ5PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.champ5PictureBox.TabIndex = 35;
+            this.champ5PictureBox.TabStop = false;
             // 
             // gameOutcomeLabel
             // 
@@ -486,8 +486,6 @@ namespace Blue_Ward
             this.Controls.Add(this.goldDiffLabel);
             this.Controls.Add(this.csDiffLabel);
             this.Controls.Add(this.gameOutcomeLabel);
-            this.Controls.Add(this.champ10Label);
-            this.Controls.Add(this.champ10PictureBox);
             this.Controls.Add(this.champ9Label);
             this.Controls.Add(this.champ9PictureBox);
             this.Controls.Add(this.champ8Label);
@@ -506,6 +504,8 @@ namespace Blue_Ward
             this.Controls.Add(this.champ2PictureBox);
             this.Controls.Add(this.champ1Label);
             this.Controls.Add(this.champ1PictureBox);
+            this.Controls.Add(this.champ0Label);
+            this.Controls.Add(this.champ0PictureBox);
             this.Controls.Add(this.item6PictureBox);
             this.Controls.Add(this.item5PictureBox);
             this.Controls.Add(this.item4PictureBox);
@@ -522,7 +522,7 @@ namespace Blue_Ward
             this.Controls.Add(this.championPictureBox);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "matchUserControl";
-            this.Size = new System.Drawing.Size(884, 166);
+            this.Size = new System.Drawing.Size(952, 166);
             this.Click += new System.EventHandler(this.matchUserControl_Click);
             ((System.ComponentModel.ISupportInitialize)(this.championPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.primaryRunePictureBox)).EndInit();
@@ -536,16 +536,16 @@ namespace Blue_Ward
             ((System.ComponentModel.ISupportInitialize)(this.item4PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item5PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item6PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.champ0PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ1PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ2PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ3PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ4PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.champ5PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.champ10PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ9PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ8PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ7PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.champ6PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.champ5PictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,6 +566,8 @@ namespace Blue_Ward
         public PictureBox item4PictureBox;
         public PictureBox item5PictureBox;
         public PictureBox item6PictureBox;
+        public Label champ0Label;
+        public PictureBox champ0PictureBox;
         public Label champ1Label;
         public PictureBox champ1PictureBox;
         public Label champ2Label;
@@ -574,10 +576,6 @@ namespace Blue_Ward
         public PictureBox champ3PictureBox;
         public Label champ4Label;
         public PictureBox champ4PictureBox;
-        public Label champ5Label;
-        public PictureBox champ5PictureBox;
-        public Label champ10Label;
-        public PictureBox champ10PictureBox;
         public Label champ9Label;
         public PictureBox champ9PictureBox;
         public Label champ8Label;
@@ -586,6 +584,8 @@ namespace Blue_Ward
         public PictureBox champ7PictureBox;
         public Label champ6Label;
         public PictureBox champ6PictureBox;
+        public Label champ5Label;
+        public PictureBox champ5PictureBox;
         public Label gameOutcomeLabel;
         public Label csDiffLabel;
         public Label goldDiffLabel;

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Blue_Ward.Properties
+namespace Farsight.Properties
 {
 
 
