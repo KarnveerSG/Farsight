@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -134,11 +135,13 @@ namespace Farsight
 
                 if (allMatchData[i].participants[userIndex].stats.win)
                 {
+                    matchUserControl.gameOutcomeLabel.ForeColor = Color.MediumPurple;
                     matchUserControl.gameOutcomeLabel.Text = "Victory!";
                 }
                 else
                 {
-                    matchUserControl.gameOutcomeLabel.Text = "Defeat!";
+                    matchUserControl.gameOutcomeLabel.ForeColor = Color.Orange;
+                    matchUserControl.gameOutcomeLabel.Text = "Defeat";
                 }
 
                 matchUserControl.KDALabel.Text = allMatchData[i].participants[userIndex].stats.kills.ToString();
