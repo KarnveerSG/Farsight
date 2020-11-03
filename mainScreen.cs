@@ -30,7 +30,7 @@ namespace Farsight
             string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
 
             champion.DeserialiseJSON(JSONParser.ChampionsFull());
-            populateSummoners();
+            //populateSummoners();
             //this.matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
             LCUInterface lCUInterface = new LCUInterface();
         }
@@ -132,43 +132,10 @@ namespace Farsight
                 userList[currentUserIndex] = user;
                 summonerAccountsComboBox.Items.Add(user.name);
                 MessageBox.Show("New Summoner '" + user.name + "' was added");
-                string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-
-                string path = projectDirectory + @"\Farsight\Users.txt";
-                if (!File.Exists(path))
-                {
-                    using (StreamWriter sw = File.CreateText(path))
-                    {
-                        for (int i = 0; i < userList.Length; i++)
-                        {
-                            sw.WriteLine(userList[i].id);
-                            sw.WriteLine(userList[i].accountId);
-                            sw.WriteLine(userList[i].puuid);
-                            sw.WriteLine(userList[i].name);
-                            sw.WriteLine(userList[i].profileIconId);
-                            sw.WriteLine(userList[i].summonerLevel);
-                            sw.WriteLine(" ");
-                        }
-                    }
-                }
-                else
-                {
-
-                    using (StreamWriter sw = File.AppendText(path))
-                    {
-                        sw.WriteLine(userList[currentUserIndex].id);
-                        sw.WriteLine(userList[currentUserIndex].accountId);
-                        sw.WriteLine(userList[currentUserIndex].puuid);
-                        sw.WriteLine(userList[currentUserIndex].name);
-                        sw.WriteLine(userList[currentUserIndex].profileIconId);
-                        sw.WriteLine(userList[currentUserIndex].summonerLevel);
-                        sw.WriteLine(" ");
-                    }
-                }
                 currentUserIndex++;
-                userList[currentUserIndex - 1].print();
             }
+
+            userList[currentUserIndex - 1].print();
         }
 
         private void addMatchHistoryButton_Click(object sender, EventArgs e)
@@ -179,7 +146,7 @@ namespace Farsight
             }
             else
             {
-                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[summonerAccountsComboBox.SelectedIndex].accountId, champion, this);
+                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[currentUserIndex - 1].accountId, champion, this);
                 newWindow.Show();
             }
         }

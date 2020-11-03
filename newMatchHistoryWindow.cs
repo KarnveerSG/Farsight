@@ -17,14 +17,14 @@ namespace Farsight
         private List<championMastery> championMasteryList = new List<championMastery>();
         Champion champion = new Champion();
         private mainScreen temp = new mainScreen();
-        private string apiKey = "RGAPI-f55d035d-ff02-42ec-aa38-d0801bd29174";
+        private string apiKey = "RGAPI-8818d132-30c9-43f1-8282-02034fab4c05";
 
         public newMatchHistoryWindow(string accountID, Champion champion, mainScreen theMainScreen)
         {
             InitializeComponent();
             this.champion = champion;
-            createMatchHistory(accountID);
             temp = theMainScreen;
+            createMatchHistory(accountID);
         }
 
         public async void createMatchHistory(string accountID)
@@ -49,6 +49,12 @@ namespace Farsight
         public async Task PopulateMatchHistory(string accountID)
         {
             HttpResponseMessage response = await client.GetAsync("https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/" + accountID + "?api_key=" + apiKey);
+
+            if (response.IsSuccessStatusCode == false)
+            {
+                MessageBox.Show("Bad Server Request\nLoading match history was aborted");
+                return;
+            }
 
             if (response != null)
             {
