@@ -56,6 +56,7 @@
     <Compile Include="currentChampMastery.cs" />
     <Compile Include="CurrentGameStats.cs" />
     <Compile Include="Images.cs" />
+    <Compile Include="LCUInterface.cs" />
     <Compile Include="matchUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
