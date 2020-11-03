@@ -34,6 +34,72 @@ namespace Farsight
             //this.matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
         }
 
+        internal void populateSummoners()
+        {
+            int counter = 1;
+            string line;
+            string[] values = new string[52];
+
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+
+            try
+            {
+                StreamReader sr = new StreamReader(projectDirectory + @"\Farsight\Users.txt"); ;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (line != " ")
+                    {
+                        values[counter] = line;
+                        counter++;
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            for(int i = 0; i < userList.Length; i++)
+            {
+                for(int j = 1; j < 7; j++)
+                {
+                    switch (j)
+                    {
+                        case 1:
+                            userList[i].id = values[j + (i * 6)];
+                            break;
+                        case 2:
+                            userList[i].accountId = values[j + (i * 6)];
+                            break;
+                        case 3:
+                            userList[i].puuid = values[j + (i * 6)];
+                            break;
+                        case 4:
+                            userList[i].name = values[j + (i * 6)];
+                            break;
+                        case 5:
+                            userList[i].profileIconId = values[j + (i * 6)];
+                            break;
+                        case 6:
+                            if (values[j + (i * 7)] != null)
+                            {
+                                userList[i].summonerLevel = Int16.Parse(values[j + (i * 6)]);
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                if (userList[i].name != null)
+                {
+                    summonerAccounts.Items.Add(userList[i].name);
+                }
+            }
+ 
+        }
+
         private void mainScreen_Load(object sender, EventArgs e)
         {
 
@@ -65,10 +131,46 @@ namespace Farsight
                 userList[currentUserIndex] = user;
                 summonerAccounts.Items.Add(user.name);
                 MessageBox.Show("New Summoner '" + user.name + "' was added");
-                currentUserIndex++;
-            }
+                string workingDirectory = Environment.CurrentDirectory;
+                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
 
-            userList[currentUserIndex - 1].print();
+                string path = projectDirectory + @"\Farsight\Users.txt";
+                if (!File.Exists(path))
+                {
+                    using (StreamWriter sw = File.CreateText(path))
+                    {
+                        for (int i = 0; i < userList.Length; i++)
+                        {
+                            sw.WriteLine(userList[i].id);
+                            sw.WriteLine(userList[i].accountId);
+                            sw.WriteLine(userList[i].puuid);
+                            sw.WriteLine(userList[i].name);
+                            sw.WriteLine(userList[i].profileIconId);
+                            sw.WriteLine(userList[i].summonerLevel);
+                            sw.WriteLine(" ");
+                        }
+                    }
+                }
+
+                else
+                {
+
+                    using (StreamWriter sw = File.AppendText(path))
+                    {
+                        sw.WriteLine(userList[currentUserIndex].id);
+                        sw.WriteLine(userList[currentUserIndex].accountId);
+                        sw.WriteLine(userList[currentUserIndex].puuid);
+                        sw.WriteLine(userList[currentUserIndex].name);
+                        sw.WriteLine(userList[currentUserIndex].profileIconId);
+                        sw.WriteLine(userList[currentUserIndex].summonerLevel);
+                        sw.WriteLine(" ");
+                    }
+                }
+
+                currentUserIndex++;
+
+                userList[currentUserIndex - 1].print();
+            }
         }
 
         private void addMatchHistoryButton_Click(object sender, EventArgs e)

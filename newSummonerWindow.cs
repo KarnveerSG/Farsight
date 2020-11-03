@@ -11,7 +11,7 @@ namespace Farsight
         private string summonerName;
         User user = new User();
         private mainScreen mainScreen;
-        private string apiKey = "RGAPI-b4f06ce4-1106-4c69-8ee8-d407750b5d18";
+        private string apiKey = "RGAPI-f55d035d-ff02-42ec-aa38-d0801bd29174";
 
         public newSummonerWindow()
         {

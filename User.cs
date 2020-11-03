@@ -18,7 +18,13 @@ namespace Farsight
 
         public User()
         {
-            name = "";
+            id = " ";
+            accountId = " ";
+            puuid = " ";
+            name = " ";
+            profileIconId = " ";
+            summonerLevel = 0;
+
         }
 
         public void setSummonerName(string summonerName)
