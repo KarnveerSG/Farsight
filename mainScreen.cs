@@ -32,6 +32,7 @@ namespace Farsight
             champion.DeserialiseJSON(JSONParser.ChampionsFull());
             populateSummoners();
             //this.matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
+            LCUInterface lCUInterface = new LCUInterface();
         }
 
         internal void populateSummoners()
