@@ -30,7 +30,7 @@ namespace Farsight
             string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
 
             champion.DeserialiseJSON(JSONParser.ChampionsFull());
-
+            populateSummoners();
             //this.matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
         }
 
@@ -83,7 +83,7 @@ namespace Farsight
                             userList[i].profileIconId = values[j + (i * 6)];
                             break;
                         case 6:
-                            if (values[j + (i * 7)] != null)
+                            if (values[j + (i * 6)] != null)
                             {
                                 userList[i].summonerLevel = Int16.Parse(values[j + (i * 6)]);
                             }
@@ -94,7 +94,7 @@ namespace Farsight
                 }
                 if (userList[i].name != null)
                 {
-                    summonerAccounts.Items.Add(userList[i].name);
+                    summonerAccountsComboBox.Items.Add(userList[i].name);
                 }
             }
  
@@ -129,7 +129,7 @@ namespace Farsight
             else
             {
                 userList[currentUserIndex] = user;
-                summonerAccounts.Items.Add(user.name);
+                summonerAccountsComboBox.Items.Add(user.name);
                 MessageBox.Show("New Summoner '" + user.name + "' was added");
                 string workingDirectory = Environment.CurrentDirectory;
                 string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
@@ -178,7 +178,7 @@ namespace Farsight
             }
             else
             {
-                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[summonerAccounts.SelectedIndex].accountId, champion, this);
+                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[summonerAccountsComboBox.SelectedIndex].accountId, champion, this);
                 newWindow.Show();
             }
         }

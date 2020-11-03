@@ -17,9 +17,9 @@ namespace Farsight
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             mainScreen Parent = new mainScreen();
-            Parent.populateSummoners();
             Application.Run(Parent);
             
+
         }
 
 

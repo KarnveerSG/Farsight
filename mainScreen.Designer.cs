@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainScreen));
-            this.summonerAccounts = new System.Windows.Forms.ComboBox();
+            this.summonerAccountsComboBox = new System.Windows.Forms.ComboBox();
             this.addNewSummonerButton = new System.Windows.Forms.Button();
             this.addMatchHistoryButton = new System.Windows.Forms.Button();
             this.activeGameButton = new System.Windows.Forms.Button();
@@ -39,13 +39,13 @@
             // 
             // summonerAccounts
             // 
-            this.summonerAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summonerAccounts.FormattingEnabled = true;
-            this.summonerAccounts.Location = new System.Drawing.Point(0, 12);
-            this.summonerAccounts.Name = "summonerAccounts";
-            this.summonerAccounts.Size = new System.Drawing.Size(184, 28);
-            this.summonerAccounts.TabIndex = 0;
-            this.summonerAccounts.Text = "Choose Account";
+            this.summonerAccountsComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summonerAccountsComboBox.FormattingEnabled = true;
+            this.summonerAccountsComboBox.Location = new System.Drawing.Point(0, 12);
+            this.summonerAccountsComboBox.Name = "summonerAccounts";
+            this.summonerAccountsComboBox.Size = new System.Drawing.Size(184, 28);
+            this.summonerAccountsComboBox.TabIndex = 0;
+            this.summonerAccountsComboBox.Text = "Choose Account";
             // 
             // addNewSummonerButton
             // 
@@ -108,7 +108,7 @@
             this.Controls.Add(this.activeGameButton);
             this.Controls.Add(this.addMatchHistoryButton);
             this.Controls.Add(this.addNewSummonerButton);
-            this.Controls.Add(this.summonerAccounts);
+            this.Controls.Add(this.summonerAccountsComboBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mainScreen";
             this.Text = "mainScreen";
@@ -119,7 +119,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox summonerAccounts;
+        private System.Windows.Forms.ComboBox summonerAccountsComboBox;
         private System.Windows.Forms.Button addNewSummonerButton;
         private System.Windows.Forms.Button addMatchHistoryButton;
         private System.Windows.Forms.Button activeGameButton;

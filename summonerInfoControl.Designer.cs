@@ -37,21 +37,21 @@
             // 
             // summonerNameLabel
             // 
-            this.summonerNameLabel.AutoSize = true;
             this.summonerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summonerNameLabel.ForeColor = System.Drawing.Color.White;
-            this.summonerNameLabel.Location = new System.Drawing.Point(16, 160);
+            this.summonerNameLabel.Location = new System.Drawing.Point(8, 160);
             this.summonerNameLabel.Name = "summonerNameLabel";
-            this.summonerNameLabel.Size = new System.Drawing.Size(173, 24);
+            this.summonerNameLabel.Size = new System.Drawing.Size(184, 26);
             this.summonerNameLabel.TabIndex = 0;
-            this.summonerNameLabel.Text = "Summoner Name";
+            this.summonerNameLabel.Text = "Name";
+            this.summonerNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.summonerNameLabel.Click += new System.EventHandler(this.summonerNameLabel_Click);
             // 
             // summonerRankLabel
             // 
-            this.summonerRankLabel.AutoSize = true;
             this.summonerRankLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summonerRankLabel.ForeColor = System.Drawing.Color.White;
-            this.summonerRankLabel.Location = new System.Drawing.Point(88, 120);
+            this.summonerRankLabel.Location = new System.Drawing.Point(90, 111);
             this.summonerRankLabel.Name = "summonerRankLabel";
             this.summonerRankLabel.Size = new System.Drawing.Size(18, 20);
             this.summonerRankLabel.TabIndex = 2;
@@ -88,7 +88,6 @@
             this.Size = new System.Drawing.Size(208, 696);
             ((System.ComponentModel.ISupportInitialize)(this.summonerProfileIconPictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

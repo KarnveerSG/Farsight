@@ -16,5 +16,10 @@ namespace Farsight
         {
             InitializeComponent();
         }
+
+        private void summonerNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
