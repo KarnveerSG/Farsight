@@ -21,5 +21,10 @@ namespace Farsight
         {
 
         }
+
+        private void summonerRankLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

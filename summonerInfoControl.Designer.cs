@@ -51,11 +51,13 @@
             // 
             this.summonerRankLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summonerRankLabel.ForeColor = System.Drawing.Color.White;
-            this.summonerRankLabel.Location = new System.Drawing.Point(90, 111);
+            this.summonerRankLabel.Location = new System.Drawing.Point(48, 111);
             this.summonerRankLabel.Name = "summonerRankLabel";
-            this.summonerRankLabel.Size = new System.Drawing.Size(18, 20);
+            this.summonerRankLabel.Size = new System.Drawing.Size(100, 20);
             this.summonerRankLabel.TabIndex = 2;
             this.summonerRankLabel.Text = "0";
+            this.summonerRankLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.summonerRankLabel.Click += new System.EventHandler(this.summonerRankLabel_Click);
             // 
             // label1
             // 
