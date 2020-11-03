@@ -41,6 +41,11 @@ namespace Farsight
 
             public string summonerName { get; set; }
             public string championName { get; set; }
+            public int spell1Id { get; set; }
+
+            public int spell2Id { get; set; }
+
+            public string highestAchievedSeasonTier { get; set; }
 
             public ParticipantTimelineDto timeline { get; set; }
 
@@ -72,6 +77,16 @@ namespace Farsight
                 public int kills { get; set; }
                 public int assists { get; set; }
                 public bool win { get; set; }
+
+                public int perk0 { get; set; }
+                public int perk1 { get; set; }
+                public int perk2 { get; set; }
+                public int perk3 { get; set; }
+                public int perk4 { get; set; }
+                public int perk5 { get; set; }
+
+                public int perkPrimaryStyle { get; set; }
+                public int perkSubStyle { get; set; }
             }
         }
         public matchData()

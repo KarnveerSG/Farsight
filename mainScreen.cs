@@ -187,7 +187,7 @@ namespace Farsight
         {
             if (userList[0] == null)
             {
-                MessageBox.Show("Atleast one summoner must be added before viewing match history!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Atleast one summoner must be added before viewing active game!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -226,11 +226,11 @@ namespace Farsight
 
                 matchUserControl.championPictureBox.Image = Images.ChampionImage(matchHistory.matches[i].championName);
 
-                matchUserControl.primaryRunePictureBox.Image = Images.PrimaryRuneTree("7201_Precision");
-                matchUserControl.secondaryRunePictureBox.Image = Images.SecondaryRuneTree("7204_Resolve");
+                matchUserControl.primaryRunePictureBox.Image = Images.PrimaryRuneTree(allMatchData[i].participants[userIndex].stats.perkPrimaryStyle);
+                matchUserControl.secondaryRunePictureBox.Image = Images.SecondaryRuneTree(allMatchData[i].participants[userIndex].stats.perkSubStyle);
 
-                matchUserControl.spell1PictureBox.Image = Images.SummonerSpell("SummonerTeleport");
-                matchUserControl.spell2PictureBox.Image = Images.SummonerSpell("SummonerFlash");
+                matchUserControl.spell1PictureBox.Image = Images.SummonerSpell(allMatchData[i].participants[userIndex].spell1Id); 
+                matchUserControl.spell2PictureBox.Image = Images.SummonerSpell(allMatchData[i].participants[userIndex].spell2Id);
 
                 if (allMatchData[i].participants[userIndex].stats.win)
                 {

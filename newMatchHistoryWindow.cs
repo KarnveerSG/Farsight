@@ -17,7 +17,7 @@ namespace Farsight
         private List<championMastery> championMasteryList = new List<championMastery>();
         Champion champion = new Champion();
         private mainScreen temp = new mainScreen();
-        private string apiKey = "RGAPI-f55d035d-ff02-42ec-aa38-d0801bd29174";
+        private string apiKey = "RGAPI-0d5c6f2b-c15f-4f06-a0ed-7b611b9e8186";
 
         public newMatchHistoryWindow(string accountID, Champion champion, mainScreen theMainScreen)
         {
@@ -43,7 +43,13 @@ namespace Farsight
 
         public async void createSelectedMatchHistory()
         {
-            await PopulateSelectedMatchHistory();
+            try
+            {
+                await PopulateSelectedMatchHistory();
+            }
+            catch(Exception ex) {
+                MessageBox.Show("Wait for server limit to reset - 2 minutes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public async Task PopulateMatchHistory(string accountID)
