@@ -151,7 +151,6 @@ namespace Farsight
                         }
                     }
                 }
-
                 else
                 {
 
@@ -166,9 +165,7 @@ namespace Farsight
                         sw.WriteLine(" ");
                     }
                 }
-
                 currentUserIndex++;
-
                 userList[currentUserIndex - 1].print();
             }
         }
@@ -181,7 +178,7 @@ namespace Farsight
             }
             else
             {
-                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[currentUserIndex - 1].accountId, champion, this);
+                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[summonerAccounts.SelectedIndex].accountId, champion, this);
                 newWindow.Show();
             }
         }
