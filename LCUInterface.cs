@@ -31,6 +31,7 @@ namespace Farsight
             Process process = new System.Diagnostics.Process();
             ProcessStartInfo startInfo = new ProcessStartInfo();
 
+            startInfo.CreateNoWindow = true;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.UseShellExecute = false;
             startInfo.RedirectStandardOutput = true;
