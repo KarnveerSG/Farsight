@@ -13,7 +13,7 @@ namespace Farsight
         private CurrentGameStats stats = new CurrentGameStats();
         private List<championMastery> fullChampionMasteryList = new List<championMastery>();
         private List<currentChampMastery> currentChamp = new List<currentChampMastery>();
-        private string apiKey = "RGAPI-8818d132-30c9-43f1-8282-02034fab4c05";
+        private string apiKey = "RGAPI-377a3bd4-7c65-489b-ac14-219dfbfbd89f";
 
         Champion champion = new Champion();
         public newActiveGameWindow(string accountId, Champion champion)

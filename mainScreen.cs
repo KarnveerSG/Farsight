@@ -8,8 +8,9 @@ namespace Farsight
 {
     public partial class mainScreen : Form
     {
-        private User[] userList = new User[5];
         int currentUserIndex = 0;
+        private User[] userList = new User[5];
+
         Champion champion = new Champion();
 
         private matchHistory matchHistory = new matchHistory();
@@ -25,14 +26,8 @@ namespace Farsight
 
             InitializeComponent();
             matchHistoryFlowLayoutPanel.AutoScroll = true;
-
-            string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-
             champion.DeserialiseJSON(JSONParser.ChampionsFull());
-            //populateSummoners();
-            //this.matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
-            LCUInterface lCUInterface = new LCUInterface();
+            populateSummoners();
         }
 
         internal void populateSummoners()
@@ -146,8 +141,7 @@ namespace Farsight
             }
             else
             {
-                newMatchHistoryWindow newWindow = new newMatchHistoryWindow(userList[currentUserIndex - 1].accountId, champion, this);
-                newWindow.Show();
+                CompleteMatchHistory completeMatchHistory = new CompleteMatchHistory(userList[summonerAccountsComboBox.SelectedIndex].accountId, champion, this);
             }
         }
 
@@ -159,7 +153,7 @@ namespace Farsight
             }
             else
             {
-                newActiveGameWindow newGameWindow = new newActiveGameWindow(userList[currentUserIndex - 1].id, champion);
+                newActiveGameWindow newGameWindow = new newActiveGameWindow(userList[summonerAccountsComboBox.SelectedIndex].id, champion);
             }
         }
 
@@ -178,7 +172,7 @@ namespace Farsight
                 int userIndex = -1;
                 for (int j = 0; j < 10; j++)
                 {
-                    if (userList[0].accountId == allMatchData[i].participantIdentities[j].player.currentAccountId)
+                    if (userList[summonerAccountsComboBox.SelectedIndex].accountId == allMatchData[i].participantIdentities[j].player.currentAccountId)
                     {
                         string name = allMatchData[i].participantIdentities[j].player.summonerName;
                         userIndex = j;
@@ -252,7 +246,7 @@ namespace Farsight
 
                 matchUserControl.champ5PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[5].championName);
                 matchUserControl.champ5Label.Text = allMatchData[i].participants[5].summonerName + " -- " + allMatchData[i].participants[5].stats.kills
-                                                + "/" + allMatchData[i].participants[5].stats.deaths + "/" + allMatchData[i].participants[5].stats.assists;
+                                                    + "/" + allMatchData[i].participants[5].stats.deaths + "/" + allMatchData[i].participants[5].stats.assists;
 
                 matchUserControl.champ6PictureBox.Image = Images.ChampionImage(allMatchData[i].participants[6].championName);
                 matchUserControl.champ6Label.Text = allMatchData[i].participants[6].summonerName +

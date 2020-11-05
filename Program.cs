@@ -16,12 +16,9 @@ namespace Farsight
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            LCUInterface lCUInterface = new LCUInterface();
             mainScreen Parent = new mainScreen();
             Application.Run(Parent);
-            
-
         }
-
-
     }
 }

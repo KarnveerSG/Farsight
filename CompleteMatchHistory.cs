@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Farsight
 {
-    public partial class newMatchHistoryWindow : Form
+    class CompleteMatchHistory
     {
         private HttpClient client = new HttpClient();
         private matchHistory matchHistory = new matchHistory();
@@ -17,14 +17,13 @@ namespace Farsight
         private List<championMastery> championMasteryList = new List<championMastery>();
         Champion champion = new Champion();
         private mainScreen temp = new mainScreen();
-        private string apiKey = "RGAPI-0d5c6f2b-c15f-4f06-a0ed-7b611b9e8186";
+        private string apiKey = "RGAPI-377a3bd4-7c65-489b-ac14-219dfbfbd89f";
 
-        public newMatchHistoryWindow(string accountID, Champion champion, mainScreen theMainScreen)
+        public CompleteMatchHistory(string accountID, Champion champion, mainScreen theMainScreen)
         {
-            InitializeComponent();
             this.champion = champion;
-            createMatchHistory(accountID);
             temp = theMainScreen;
+            createMatchHistory(accountID);
         }
 
         public async void createMatchHistory(string accountID)
@@ -33,7 +32,7 @@ namespace Farsight
         }
         private void matchHistoryButton_Click(object sender, EventArgs e)
         {
-            createSelectedMatchHistory();           //Finds history for selected match & all champion masteries for all participants
+            CreateMatchHistory();           //Finds history for selected match & all champion masteries for all participants
         }
 
         public async Task createChampionMasteryHistory(string ID, int index)
@@ -41,13 +40,14 @@ namespace Farsight
             await PopulateChampionMasteryHistory(ID, index);
         }
 
-        public async void createSelectedMatchHistory()
+        public async void CreateMatchHistory()
         {
             try
             {
                 await PopulateSelectedMatchHistory();
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show("Wait for server limit to reset - 2 minutes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -67,6 +67,8 @@ namespace Farsight
                     champion.keys.TryGetValue(matchHistory.matches[i].champion, out temp);
                     matchHistory.matches[i].championName = temp;
                 }
+
+                CreateMatchHistory();
             }
         }
 
