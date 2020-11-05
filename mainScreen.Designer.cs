@@ -35,14 +35,15 @@
             this.activeGameButton = new System.Windows.Forms.Button();
             this.matchHistoryFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.summonerInfoPanel = new System.Windows.Forms.Panel();
+            this.programNameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // summonerAccounts
+            // summonerAccountsComboBox
             // 
             this.summonerAccountsComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summonerAccountsComboBox.FormattingEnabled = true;
-            this.summonerAccountsComboBox.Location = new System.Drawing.Point(0, 12);
-            this.summonerAccountsComboBox.Name = "summonerAccounts";
+            this.summonerAccountsComboBox.Location = new System.Drawing.Point(0, 40);
+            this.summonerAccountsComboBox.Name = "summonerAccountsComboBox";
             this.summonerAccountsComboBox.Size = new System.Drawing.Size(184, 28);
             this.summonerAccountsComboBox.TabIndex = 0;
             this.summonerAccountsComboBox.Text = "Choose Account";
@@ -50,7 +51,7 @@
             // addNewSummonerButton
             // 
             this.addNewSummonerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewSummonerButton.Location = new System.Drawing.Point(0, 80);
+            this.addNewSummonerButton.Location = new System.Drawing.Point(0, 108);
             this.addNewSummonerButton.Name = "addNewSummonerButton";
             this.addNewSummonerButton.Size = new System.Drawing.Size(184, 28);
             this.addNewSummonerButton.TabIndex = 1;
@@ -61,7 +62,7 @@
             // addMatchHistoryButton
             // 
             this.addMatchHistoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addMatchHistoryButton.Location = new System.Drawing.Point(0, 114);
+            this.addMatchHistoryButton.Location = new System.Drawing.Point(0, 142);
             this.addMatchHistoryButton.Name = "addMatchHistoryButton";
             this.addMatchHistoryButton.Size = new System.Drawing.Size(184, 29);
             this.addMatchHistoryButton.TabIndex = 2;
@@ -72,7 +73,7 @@
             // activeGameButton
             // 
             this.activeGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.activeGameButton.Location = new System.Drawing.Point(0, 149);
+            this.activeGameButton.Location = new System.Drawing.Point(0, 177);
             this.activeGameButton.Name = "activeGameButton";
             this.activeGameButton.Size = new System.Drawing.Size(184, 31);
             this.activeGameButton.TabIndex = 3;
@@ -97,12 +98,25 @@
             this.summonerInfoPanel.Size = new System.Drawing.Size(208, 696);
             this.summonerInfoPanel.TabIndex = 5;
             // 
+            // programNameLabel
+            // 
+            this.programNameLabel.AutoSize = true;
+            this.programNameLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.programNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.programNameLabel.ForeColor = System.Drawing.Color.White;
+            this.programNameLabel.Location = new System.Drawing.Point(0, 0);
+            this.programNameLabel.Name = "programNameLabel";
+            this.programNameLabel.Size = new System.Drawing.Size(184, 39);
+            this.programNameLabel.TabIndex = 6;
+            this.programNameLabel.Text = "Farsight    ";
+            // 
             // mainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.ClientSize = new System.Drawing.Size(1372, 688);
+            this.Controls.Add(this.programNameLabel);
             this.Controls.Add(this.summonerInfoPanel);
             this.Controls.Add(this.matchHistoryFlowLayoutPanel);
             this.Controls.Add(this.activeGameButton);
@@ -114,6 +128,7 @@
             this.Text = "mainScreen";
             this.Load += new System.EventHandler(this.mainScreen_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -125,5 +140,6 @@
         private System.Windows.Forms.Button activeGameButton;
         private System.Windows.Forms.FlowLayoutPanel matchHistoryFlowLayoutPanel;
         public System.Windows.Forms.Panel summonerInfoPanel;
+        private System.Windows.Forms.Label programNameLabel;
     }
 }
