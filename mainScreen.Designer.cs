@@ -36,6 +36,8 @@
             this.matchHistoryFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.summonerInfoPanel = new System.Windows.Forms.Panel();
             this.programNameLabel = new System.Windows.Forms.Label();
+            this.clientStatusLabel = new System.Windows.Forms.Label();
+            this.clientStatusButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // summonerAccountsComboBox
@@ -51,7 +53,7 @@
             // addNewSummonerButton
             // 
             this.addNewSummonerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewSummonerButton.Location = new System.Drawing.Point(0, 108);
+            this.addNewSummonerButton.Location = new System.Drawing.Point(0, 216);
             this.addNewSummonerButton.Name = "addNewSummonerButton";
             this.addNewSummonerButton.Size = new System.Drawing.Size(184, 28);
             this.addNewSummonerButton.TabIndex = 1;
@@ -62,7 +64,7 @@
             // addMatchHistoryButton
             // 
             this.addMatchHistoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addMatchHistoryButton.Location = new System.Drawing.Point(0, 142);
+            this.addMatchHistoryButton.Location = new System.Drawing.Point(0, 250);
             this.addMatchHistoryButton.Name = "addMatchHistoryButton";
             this.addMatchHistoryButton.Size = new System.Drawing.Size(184, 29);
             this.addMatchHistoryButton.TabIndex = 2;
@@ -73,7 +75,7 @@
             // activeGameButton
             // 
             this.activeGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.activeGameButton.Location = new System.Drawing.Point(0, 177);
+            this.activeGameButton.Location = new System.Drawing.Point(0, 285);
             this.activeGameButton.Name = "activeGameButton";
             this.activeGameButton.Size = new System.Drawing.Size(184, 31);
             this.activeGameButton.TabIndex = 3;
@@ -110,12 +112,37 @@
             this.programNameLabel.TabIndex = 6;
             this.programNameLabel.Text = "Farsight    ";
             // 
+            // clientStatusLabel
+            // 
+            this.clientStatusLabel.AutoSize = true;
+            this.clientStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientStatusLabel.ForeColor = System.Drawing.Color.White;
+            this.clientStatusLabel.Location = new System.Drawing.Point(16, 112);
+            this.clientStatusLabel.Name = "clientStatusLabel";
+            this.clientStatusLabel.Size = new System.Drawing.Size(75, 29);
+            this.clientStatusLabel.TabIndex = 7;
+            this.clientStatusLabel.Text = "Client";
+            this.clientStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // clientStatusButton
+            // 
+            this.clientStatusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientStatusButton.Location = new System.Drawing.Point(0, 144);
+            this.clientStatusButton.Name = "clientStatusButton";
+            this.clientStatusButton.Size = new System.Drawing.Size(184, 32);
+            this.clientStatusButton.TabIndex = 8;
+            this.clientStatusButton.Text = "Get Client Status";
+            this.clientStatusButton.UseVisualStyleBackColor = true;
+            this.clientStatusButton.Click += new System.EventHandler(this.clientStatusButton_Click);
+            // 
             // mainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.ClientSize = new System.Drawing.Size(1372, 688);
+            this.Controls.Add(this.clientStatusButton);
+            this.Controls.Add(this.clientStatusLabel);
             this.Controls.Add(this.programNameLabel);
             this.Controls.Add(this.summonerInfoPanel);
             this.Controls.Add(this.matchHistoryFlowLayoutPanel);
@@ -141,5 +168,7 @@
         private System.Windows.Forms.FlowLayoutPanel matchHistoryFlowLayoutPanel;
         public System.Windows.Forms.Panel summonerInfoPanel;
         private System.Windows.Forms.Label programNameLabel;
+        private System.Windows.Forms.Label clientStatusLabel;
+        private System.Windows.Forms.Button clientStatusButton;
     }
 }

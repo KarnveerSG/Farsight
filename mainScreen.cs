@@ -52,14 +52,14 @@ namespace Farsight
                     }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
 
-            for(int i = 0; i < userList.Length; i++)
+            for (int i = 0; i < userList.Length; i++)
             {
-                for(int j = 1; j < 7; j++)
+                for (int j = 1; j < 7; j++)
                 {
                     switch (j)
                     {
@@ -93,7 +93,7 @@ namespace Farsight
                     summonerAccountsComboBox.Items.Add(userList[i].name);
                 }
             }
- 
+
         }
 
         private void mainScreen_Load(object sender, EventArgs e)
@@ -191,7 +191,7 @@ namespace Farsight
                 matchUserControl.primaryRunePictureBox.Image = Images.PrimaryRuneTree(allMatchData[i].participants[userIndex].stats.perkPrimaryStyle);
                 matchUserControl.secondaryRunePictureBox.Image = Images.SecondaryRuneTree(allMatchData[i].participants[userIndex].stats.perkSubStyle);
 
-                matchUserControl.spell1PictureBox.Image = Images.SummonerSpell(allMatchData[i].participants[userIndex].spell1Id); 
+                matchUserControl.spell1PictureBox.Image = Images.SummonerSpell(allMatchData[i].participants[userIndex].spell1Id);
                 matchUserControl.spell2PictureBox.Image = Images.SummonerSpell(allMatchData[i].participants[userIndex].spell2Id);
 
                 if (allMatchData[i].participants[userIndex].stats.win)
@@ -269,6 +269,20 @@ namespace Farsight
                                                     + "/" + allMatchData[i].participants[9].stats.deaths + "/" + allMatchData[i].participants[9].stats.assists;
 
                 matchHistoryFlowLayoutPanel.Controls.Add(matchUserControl);
+            }
+        }
+
+        private void clientStatusButton_Click(object sender, EventArgs e)
+        {
+            if (LCUInterface.IsLCUActive() == true)
+            {
+                clientStatusLabel.ForeColor = Color.LimeGreen;
+                clientStatusLabel.Text = "Client Online";
+            }
+            else
+            {
+                clientStatusLabel.ForeColor = Color.OrangeRed;
+                clientStatusLabel.Text = "Client Offline";
             }
         }
     }

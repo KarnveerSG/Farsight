@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace Farsight
 {
@@ -11,6 +12,16 @@ namespace Farsight
             Console.WriteLine(GetProcessListScript());
             Console.WriteLine(GetClientPort(GetProcessListScript()));
             Console.WriteLine(GetRemotingAuthToken(GetProcessListScript()));
+        }
+
+        public static bool IsLCUActive()
+        {
+            Process[] processes = Process.GetProcessesByName("LeagueClientUx");
+            if (processes.Length != 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         private string GetProcessListScript()
