@@ -17,7 +17,7 @@ namespace Farsight
         private List<championMastery> championMasteryList = new List<championMastery>();
         Champion champion = new Champion();
         private mainScreen temp = new mainScreen();
-        private string apiKey = "RGAPI-377a3bd4-7c65-489b-ac14-219dfbfbd89f";
+        private string apiKey = JSONParser.APIKEY;
 
         public CompleteMatchHistory(string accountID, Champion champion, mainScreen theMainScreen)
         {
