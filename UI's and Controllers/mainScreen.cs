@@ -196,12 +196,12 @@ namespace Farsight
 
                 if (allMatchData[i].participants[userIndex].stats.win)
                 {
-                    matchUserControl.gameOutcomeLabel.ForeColor = Color.MediumPurple;
+                    matchUserControl.gameOutcomeLabel.ForeColor = Color.Aqua;
                     matchUserControl.gameOutcomeLabel.Text = "Victory!";
                 }
                 else
                 {
-                    matchUserControl.gameOutcomeLabel.ForeColor = Color.Orange;
+                    matchUserControl.gameOutcomeLabel.ForeColor = Color.OrangeRed;
                     matchUserControl.gameOutcomeLabel.Text = "Defeat";
                 }
 
