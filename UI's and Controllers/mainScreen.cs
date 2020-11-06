@@ -41,7 +41,7 @@ namespace Farsight
 
             try
             {
-                StreamReader sr = new StreamReader(projectDirectory + @"\Farsight\Users.txt"); ;
+                StreamReader sr = new StreamReader(projectDirectory + @"\Farsight\Program Assets\Users.txt"); ;
 
                 while ((line = sr.ReadLine()) != null)
                 {

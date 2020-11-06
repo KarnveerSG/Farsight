@@ -56,63 +56,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Champion.cs" />
-    <Compile Include="CompleteMatchHistory.cs" />
-    <Compile Include="currentChampMastery.cs" />
-    <Compile Include="CurrentGameStats.cs" />
+    <Compile Include="Deserializable Objects\Champion.cs" />
+    <Compile Include="Deserializable Objects\CompleteMatchHistory.cs" />
+    <Compile Include="Deserializable Objects\currentChampMastery.cs" />
+    <Compile Include="Deserializable Objects\CurrentGameStats.cs" />
     <Compile Include="Images.cs" />
     <Compile Include="LCU\LCUInterface.cs" />
     <Compile Include="LCU\Plugin lol-summoner\GetLolSummonerV1CurrentSummoner.cs" />
-    <Compile Include="matchUserControl.cs">
+    <Compile Include="UI%27s and Controllers\matchUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="matchUserControl.Designer.cs">
+    <Compile Include="UI%27s and Controllers\matchUserControl.Designer.cs">
       <DependentUpon>matchUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="newActiveGameWindow.cs">
+    <Compile Include="UI%27s and Controllers\newActiveGameWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newActiveGameWindow.Designer.cs">
+    <Compile Include="UI%27s and Controllers\newActiveGameWindow.Designer.cs">
       <DependentUpon>newActiveGameWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="JSONParser.cs" />
-    <Compile Include="championMastery.cs" />
-    <Compile Include="matchData.cs" />
-    <Compile Include="matchHistory.cs" />
-    <Compile Include="mainScreen.cs">
+    <Compile Include="Deserializable Objects\JSONParser.cs" />
+    <Compile Include="Deserializable Objects\championMastery.cs" />
+    <Compile Include="Deserializable Objects\matchData.cs" />
+    <Compile Include="Deserializable Objects\matchHistory.cs" />
+    <Compile Include="UI%27s and Controllers\mainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mainScreen.Designer.cs">
+    <Compile Include="UI%27s and Controllers\mainScreen.Designer.cs">
       <DependentUpon>mainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="newSummonerWindow.cs">
+    <Compile Include="UI%27s and Controllers\newSummonerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newSummonerWindow.Designer.cs">
+    <Compile Include="UI%27s and Controllers\newSummonerWindow.Designer.cs">
       <DependentUpon>newSummonerWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoundPictureBox.cs">
+    <Compile Include="UI%27s and Controllers\RoundPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="summonerInfoControl.cs">
+    <Compile Include="UI%27s and Controllers\summonerInfoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="summonerInfoControl.Designer.cs">
+    <Compile Include="UI%27s and Controllers\summonerInfoControl.Designer.cs">
       <DependentUpon>summonerInfoControl.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <EmbeddedResource Include="mainScreen.resx">
+    <EmbeddedResource Include="UI%27s and Controllers\mainScreen.resx">
       <DependentUpon>mainScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="matchUserControl.resx">
+    <EmbeddedResource Include="UI%27s and Controllers\matchUserControl.resx">
       <DependentUpon>matchUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newActiveGameWindow.resx">
+    <EmbeddedResource Include="UI%27s and Controllers\newActiveGameWindow.resx">
       <DependentUpon>newActiveGameWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newSummonerWindow.resx">
+    <EmbeddedResource Include="UI%27s and Controllers\newSummonerWindow.resx">
       <DependentUpon>newSummonerWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -125,7 +125,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="summonerInfoControl.resx">
+    <EmbeddedResource Include="UI%27s and Controllers\summonerInfoControl.resx">
       <DependentUpon>summonerInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data\champion.json" />
@@ -289,7 +289,7 @@
     <None Include="Data\runesReforged.json" />
     <None Include="Data\sticker.json" />
     <None Include="Data\summoner.json" />
-    <None Include="packages.config" />
+    <None Include="Program Assets\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -301,10 +301,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Program Assets\App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="3363.ico" />
+    <Content Include="Program Assets\3363.ico" />
     <Content Include="Images\champion\loading\Aatrox_0.jpg" />
     <Content Include="Images\champion\loading\Aatrox_1.jpg" />
     <Content Include="Images\champion\loading\Aatrox_11.jpg" />
@@ -8586,6 +8587,7 @@
     <Content Include="Images\ranked-positions\Position_Silver-Mid.png" />
     <Content Include="Images\ranked-positions\Position_Silver-Support.png" />
     <Content Include="Images\ranked-positions\Position_Silver-Top.png" />
+    <Content Include="Program Assets\Users.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
