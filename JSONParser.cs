@@ -7,7 +7,7 @@ namespace Farsight
 {
     class JSONParser
     {
-        public static string APIKEY = "RGAPI-377a3bd4-7c65-489b-ac14-219dfbfbd89f";
+        public static string APIKEY = "RGAPI-e073faea-60ff-4bd7-a961-f797bc273912";
 
         public JSONParser()
         {

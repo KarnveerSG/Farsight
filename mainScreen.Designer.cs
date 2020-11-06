@@ -168,7 +168,7 @@
         private System.Windows.Forms.FlowLayoutPanel matchHistoryFlowLayoutPanel;
         public System.Windows.Forms.Panel summonerInfoPanel;
         private System.Windows.Forms.Label programNameLabel;
-        private System.Windows.Forms.Label clientStatusLabel;
-        private System.Windows.Forms.Button clientStatusButton;
+        public System.Windows.Forms.Label clientStatusLabel;
+        public System.Windows.Forms.Button clientStatusButton;
     }
 }
