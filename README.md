@@ -13,7 +13,7 @@ Farsight is a windows form application is designed to help players get detailed 
 
 
 ### Adding User
-To add summoners/user data, click on the "Add Summoner" button which opens a popup that allows the user to input a summoner name. This will allow the user to select "Match History" and that will display all the relevant information and statistics regarding that summoner's match history.
+To add a summoner's/user's data, click on the "Add Summoner" button which opens a popup that allows the user to input a summoner name. This will allow the user to select "Match History" and that will display all the relevant information and statistics regarding that summoner's match history.
 
 ![AddSummoner](https://user-images.githubusercontent.com/46460325/104664064-308a3300-5683-11eb-870b-eef608b93295.PNG)
 
